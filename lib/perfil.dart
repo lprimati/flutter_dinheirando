@@ -39,155 +39,160 @@ class _PerfilPageState extends State<PerfilPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Perfil'),
-        elevation: 0,
-        backgroundColor: Color(0xFF189B17),
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back_ios),
-          onPressed: () {},
-        ),
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.search),
+        appBar: AppBar(
+          title: Text('Perfil'),
+          elevation: 0,
+          backgroundColor: Color(0xFF189B17),
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back_ios),
             onPressed: () {},
-          )
-        ],
-      ),
-      body: Column(
-        children: <Widget>[
-          Container(
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height / 3,
-            child: Column(
-              children: <Widget>[
-                Icon(
-                  Icons.person,
-                  size: 140,
-                  color: Color(0xFF189B17),
-                ),
-                Text(
-                  'Alberto Silva',
-                  style: TextStyle(
-                      color: Color(0xFF189B17),
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 8, bottom: 16),
-                  child: Text(
-                    'ID: 1234567',
-                    style: TextStyle(color: Colors.black),
-                  ),
-                )
-              ],
-            ),
           ),
-          Container(
-            height: 200,
-            padding: EdgeInsets.all(32),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          actions: <Widget>[
+            IconButton(
+              icon: Icon(Icons.search),
+              onPressed: () {},
+            )
+          ],
+        ),
+        body: Stack(
+          fit: StackFit.expand,
+          children: <Widget>[
+            Image(image: AssetImage('assets/images/proj_tcc_08.jpg')),
+            Column(
               children: <Widget>[
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: <Widget>[
-                    Column(
-                      children: <Widget>[
-                        Icon(
-                          Icons.feedback_outlined,
-                          size: 30,
-                          color: Color(0xFF189B17),
+                Container(
+                  width: MediaQuery.of(context).size.width,
+                  height: MediaQuery.of(context).size.height / 3,
+                  child: Column(
+                    children: <Widget>[
+                      Icon(
+                        Icons.person,
+                        size: 140,
+                        color: Color(0xFF189B17),
+                      ),
+                      Text(
+                        'Alberto Silva',
+                        style: TextStyle(
+                            color: Color(0xFF189B17),
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 8, bottom: 16),
+                        child: Text(
+                          'ID: 1234567',
+                          style: TextStyle(color: Colors.black),
                         ),
-                        Text(
-                          'Feed',
-                          style: TextStyle(
-                              color: Color(0xFF189B17),
-                              fontWeight: FontWeight.bold),
-                        )
-                      ],
-                    ),
-                    Column(
-                      children: <Widget>[
-                        Icon(
-                          Icons.forum,
-                          size: 30,
-                          color: Color(0xFF189B17),
-                        ),
-                        Text(
-                          'Fórum',
-                          style: TextStyle(
-                              color: Color(0xFF189B17),
-                              fontWeight: FontWeight.bold),
-                        )
-                      ],
-                    ),
-                  ],
-                ),
-                Spacer(),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: <Widget>[
-                    Column(
-                      children: <Widget>[
-                        Icon(
-                          Icons.class_,
-                          size: 30,
-                          color: Color(0xFF189B17),
-                        ),
-                        Text(
-                          'Aulas',
-                          style: TextStyle(
-                              color: Color(0xFF189B17),
-                              fontWeight: FontWeight.bold),
-                        )
-                      ],
-                    ),
-                    Column(
-                      children: <Widget>[
-                        Icon(
-                          Icons.local_mall,
-                          size: 30,
-                          color: Color(0xFF189B17),
-                        ),
-                        Text(
-                          'Loja',
-                          style: TextStyle(
-                              color: Color(0xFF189B17),
-                              fontWeight: FontWeight.bold),
-                        )
-                      ],
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ),
-          Container(
-            child: Column(
-              children: <Widget>[
-                Text(
-                  'Following : 50',
-                  style: TextStyle(
-                    color: Color(0xFF189B17),
-                    fontSize: 20,
+                      )
+                    ],
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 8, bottom: 16),
-                  child: Text(
-                    'Follower: 10',
-                    style: TextStyle(
-                      color: Color(0xFF189B17),
-                      fontSize: 20,
-                    ),
+                Container(
+                  height: 200,
+                  padding: EdgeInsets.all(32),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: <Widget>[
+                          Column(
+                            children: <Widget>[
+                              Icon(
+                                Icons.feedback_outlined,
+                                size: 30,
+                                color: Color(0xFF189B17),
+                              ),
+                              Text(
+                                'Feed',
+                                style: TextStyle(
+                                    color: Color(0xFF189B17),
+                                    fontWeight: FontWeight.bold),
+                              )
+                            ],
+                          ),
+                          Column(
+                            children: <Widget>[
+                              Icon(
+                                Icons.forum,
+                                size: 30,
+                                color: Color(0xFF189B17),
+                              ),
+                              Text(
+                                'Fórum',
+                                style: TextStyle(
+                                    color: Color(0xFF189B17),
+                                    fontWeight: FontWeight.bold),
+                              )
+                            ],
+                          ),
+                        ],
+                      ),
+                      Spacer(),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: <Widget>[
+                          Column(
+                            children: <Widget>[
+                              Icon(
+                                Icons.class_,
+                                size: 30,
+                                color: Color(0xFF189B17),
+                              ),
+                              Text(
+                                'Aulas',
+                                style: TextStyle(
+                                    color: Color(0xFF189B17),
+                                    fontWeight: FontWeight.bold),
+                              )
+                            ],
+                          ),
+                          Column(
+                            children: <Widget>[
+                              Icon(
+                                Icons.local_mall,
+                                size: 30,
+                                color: Color(0xFF189B17),
+                              ),
+                              Text(
+                                'Loja',
+                                style: TextStyle(
+                                    color: Color(0xFF189B17),
+                                    fontWeight: FontWeight.bold),
+                              )
+                            ],
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
-                )
+                ),
+                Container(
+                  child: Column(
+                    children: <Widget>[
+                      Text(
+                        'Following : 50',
+                        style: TextStyle(
+                          color: Color(0xFF189B17),
+                          fontSize: 20,
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 8, bottom: 16),
+                        child: Text(
+                          'Follower: 10',
+                          style: TextStyle(
+                            color: Color(0xFF189B17),
+                            fontSize: 20,
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
               ],
             ),
-          ),
-        ],
-      ),
-    );
+          ],
+        ));
   }
 }

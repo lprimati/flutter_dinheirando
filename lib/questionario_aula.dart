@@ -51,86 +51,92 @@ class _PerfilPageState extends State<PerfilPage> {
             )
           ],
         ),
-        body: SingleChildScrollView(
-          child: SizedBox(
-            width: MediaQuery.of(context).size.width,
-            //height: MediaQuery.of(context).size.height,
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  const SizedBox(
-                    height: 60,
-                  ),
-                  Text(
-                    'Se você possui dinheiro, você...',
-                    style: TextStyle(
-                      color: Color(0xFF189B17),
-                      fontSize: 24,
-                      //fontWeight: FontWeight.bold
-                    ),
-                  ),
-                  Container(
-                      child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      const SizedBox(
-                        height: 50,
-                      ),
-                      ElevatedButton(
-                        onPressed: () {},
-                        child: Text('Gasta'),
-                        style: ElevatedButton.styleFrom(
-                          primary: Color(0xFF189B17),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      ElevatedButton(
-                        onPressed: () {},
-                        child: Text('Investe'),
-                        style: ElevatedButton.styleFrom(
-                          primary: Color(0xFF189B17),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      ElevatedButton(
-                        onPressed: () {},
-                        child: Text('Guarda'),
-                        style: ElevatedButton.styleFrom(
-                          primary: Color(0xFF189B17),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      ElevatedButton(
-                        onPressed: () {},
-                        child: Text('Doa'),
-                        style: ElevatedButton.styleFrom(
-                          primary: Color(0xFF189B17),
-                        ),
-                      ),
+        body: Stack(
+          fit: StackFit.expand,
+          children: <Widget>[
+            Image(image: AssetImage('assets/images/proj_tcc_08.jpg')),
+            SingleChildScrollView(
+              child: SizedBox(
+                width: MediaQuery.of(context).size.width,
+                //height: MediaQuery.of(context).size.height,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
                       const SizedBox(
                         height: 60,
                       ),
-                      ElevatedButton(
-                        onPressed: () {},
-                        child: Text('Avançar'),
-                        style: ElevatedButton.styleFrom(
-                          primary: Color(0xFF189B17),
+                      Text(
+                        'Se você possui dinheiro, você...',
+                        style: TextStyle(
+                          color: Color(0xFF189B17),
+                          fontSize: 24,
+                          //fontWeight: FontWeight.bold
                         ),
                       ),
+                      Container(
+                          child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          const SizedBox(
+                            height: 50,
+                          ),
+                          ElevatedButton(
+                            onPressed: () {},
+                            child: Text('Gasta'),
+                            style: ElevatedButton.styleFrom(
+                              primary: Color(0xFF189B17),
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 20,
+                          ),
+                          ElevatedButton(
+                            onPressed: () {},
+                            child: Text('Investe'),
+                            style: ElevatedButton.styleFrom(
+                              primary: Color(0xFF189B17),
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 20,
+                          ),
+                          ElevatedButton(
+                            onPressed: () {},
+                            child: Text('Guarda'),
+                            style: ElevatedButton.styleFrom(
+                              primary: Color(0xFF189B17),
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 20,
+                          ),
+                          ElevatedButton(
+                            onPressed: () {},
+                            child: Text('Doa'),
+                            style: ElevatedButton.styleFrom(
+                              primary: Color(0xFF189B17),
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 60,
+                          ),
+                          ElevatedButton(
+                            onPressed: () {},
+                            child: Text('Avançar'),
+                            style: ElevatedButton.styleFrom(
+                              primary: Color(0xFF189B17),
+                            ),
+                          ),
+                        ],
+                      ))
                     ],
-                  ))
-                ],
+                  ),
+                ),
               ),
-            ),
-          ),
+            )
+          ],
         ));
   }
 }

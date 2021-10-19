@@ -51,71 +51,77 @@ class _PerfilPageState extends State<PerfilPage> {
             )
           ],
         ),
-        body: SingleChildScrollView(
-          child: SizedBox(
-            width: MediaQuery.of(context).size.width,
-            //height: MediaQuery.of(context).size.height,
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  const SizedBox(
-                    height: 180,
+        body: Stack(
+          fit: StackFit.expand,
+          children: <Widget>[
+            Image(image: AssetImage('assets/images/proj_tcc_08.jpg')),
+            SingleChildScrollView(
+              child: SizedBox(
+                width: MediaQuery.of(context).size.width,
+                //height: MediaQuery.of(context).size.height,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      const SizedBox(
+                        height: 180,
+                      ),
+                      ElevatedButton.icon(
+                        onPressed: () {},
+                        icon: Image.asset(
+                          'images/atividade1.png',
+                          height: 100,
+                          width: 100,
+                        ),
+                        label: Text(
+                          '',
+                        ),
+                        style: ElevatedButton.styleFrom(
+                          primary: Colors.white,
+                          onPrimary: Colors.black,
+                        ),
+                      ),
+                      Text(
+                        'Atividade 1',
+                        style: TextStyle(
+                          color: Color(0xFF189B17),
+                          fontSize: 24,
+                          //fontWeight: FontWeight.bold
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      ElevatedButton.icon(
+                        onPressed: () {},
+                        icon: Image.asset(
+                          'images/atividade2.png',
+                          height: 100,
+                          width: 100,
+                        ),
+                        label: Text(
+                          '',
+                        ),
+                        style: ElevatedButton.styleFrom(
+                          primary: Colors.white,
+                          onPrimary: Colors.black,
+                        ),
+                      ),
+                      Text(
+                        'Atividade 2',
+                        style: TextStyle(
+                          color: Color(0xFF189B17),
+                          fontSize: 24,
+                          //fontWeight: FontWeight.bold
+                        ),
+                      ),
+                    ],
                   ),
-                  ElevatedButton.icon(
-                    onPressed: () {},
-                    icon: Image.asset(
-                      'images/atividade1.png',
-                      height: 100,
-                      width: 100,
-                    ),
-                    label: Text(
-                      '',
-                    ),
-                    style: ElevatedButton.styleFrom(
-                      primary: Colors.white,
-                      onPrimary: Colors.black,
-                    ),
-                  ),
-                  Text(
-                    'Atividade 1',
-                    style: TextStyle(
-                      color: Color(0xFF189B17),
-                      fontSize: 24,
-                      //fontWeight: FontWeight.bold
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  ElevatedButton.icon(
-                    onPressed: () {},
-                    icon: Image.asset(
-                      'images/atividade2.png',
-                      height: 100,
-                      width: 100,
-                    ),
-                    label: Text(
-                      '',
-                    ),
-                    style: ElevatedButton.styleFrom(
-                      primary: Colors.white,
-                      onPrimary: Colors.black,
-                    ),
-                  ),
-                  Text(
-                    'Atividade 2',
-                    style: TextStyle(
-                      color: Color(0xFF189B17),
-                      fontSize: 24,
-                      //fontWeight: FontWeight.bold
-                    ),
-                  ),
-                ],
+                ),
               ),
-            ),
-          ),
+            )
+          ],
         ));
   }
 }
