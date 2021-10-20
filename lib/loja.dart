@@ -37,6 +37,7 @@ class _PerfilPageState extends State<PerfilPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          centerTitle: true,
           title: Text('Loja'),
           elevation: 0,
           backgroundColor: Color(0xFF189B17),

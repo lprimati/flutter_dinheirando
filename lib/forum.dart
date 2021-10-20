@@ -37,6 +37,7 @@ class _PerfilPageState extends State<PerfilPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          centerTitle: true,
           title: Text('Fórum do aluno'),
           elevation: 0,
           backgroundColor: Color(0xFF189B17),
@@ -65,119 +66,137 @@ class _PerfilPageState extends State<PerfilPage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Container(
+                          //height: 200,
+                          padding: EdgeInsets.all(32),
                           child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          const SizedBox(
-                            height: 50,
-                          ),
-                          ElevatedButton(
-                            onPressed: () {},
-                            child: Text('Voltar'),
-                            style: ElevatedButton.styleFrom(
-                                onPrimary: Color(0xFF189B17),
-                                primary: Colors.white),
-                          ),
-                          const SizedBox(
-                            height: 10,
-                          ),
-                          ElevatedButton(
-                            onPressed: () {},
-                            child: Text('Avançar'),
-                            style: ElevatedButton.styleFrom(
-                                onPrimary: Color(0xFF189B17),
-                                primary: Colors.white),
-                          ),
-                          const SizedBox(
-                            height: 40,
-                          ),
-                          ElevatedButton.icon(
-                            onPressed: () {},
-                            icon: Icon(Icons.feedback_outlined),
-                            label: Text(
-                                'Lorem ipsum dolor sit amet, consectetur adipiscing.'),
-                            //style: ElevatedButton.styleFrom(
-                            //onPrimary: Color(0xFF189B17),
-                            //primary: Colors.white),
-                            style: ElevatedButton.styleFrom(
-                                primary: Colors.white,
-                                onPrimary: Colors.black,
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: 70, vertical: 15)),
-                          ),
-                          ElevatedButton.icon(
-                            onPressed: () {},
-                            icon: Icon(Icons.feedback_outlined),
-                            label: Text(
-                                'Lorem ipsum dolor sit amet, consectetur adipiscing.'),
-                            //style: ElevatedButton.styleFrom(
-                            //onPrimary: Color(0xFF189B17),
-                            //primary: Colors.white),
-                            style: ElevatedButton.styleFrom(
-                                primary: Color(0xFF189B17),
-                                onPrimary: Colors.black,
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: 70, vertical: 15)),
-                          ),
-                          ElevatedButton.icon(
-                            onPressed: () {},
-                            icon: Icon(Icons.feedback_outlined),
-                            label: Text(
-                                'Lorem ipsum dolor sit amet, consectetur adipiscing.'),
-                            //style: ElevatedButton.styleFrom(
-                            //onPrimary: Color(0xFF189B17),
-                            //primary: Colors.white),
-                            style: ElevatedButton.styleFrom(
-                                primary: Colors.white,
-                                onPrimary: Colors.black,
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: 70, vertical: 15)),
-                          ),
-                          ElevatedButton.icon(
-                            onPressed: () {},
-                            icon: Icon(Icons.feedback_outlined),
-                            label: Text(
-                                'Lorem ipsum dolor sit amet, consectetur adipiscing.'),
-                            //style: ElevatedButton.styleFrom(
-                            //onPrimary: Color(0xFF189B17),
-                            //primary: Colors.white),
-                            style: ElevatedButton.styleFrom(
-                              primary: Color(0xFF189B17),
-                              onPrimary: Colors.black,
-                              padding: EdgeInsets.symmetric(
-                                  horizontal: 70, vertical: 15),
-                            ),
-                          ),
-                          ElevatedButton.icon(
-                            onPressed: () {},
-                            icon: Icon(Icons.feedback_outlined),
-                            label: Text(
-                                'Lorem ipsum dolor sit amet, consectetur adipiscing.'),
-                            //style: ElevatedButton.styleFrom(
-                            //onPrimary: Color(0xFF189B17),
-                            //primary: Colors.white),
-                            style: ElevatedButton.styleFrom(
-                                primary: Colors.white,
-                                onPrimary: Colors.black,
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: 70, vertical: 15)),
-                          ),
-                          ElevatedButton.icon(
-                            onPressed: () {},
-                            icon: Icon(Icons.feedback_outlined),
-                            label: Text(
-                                'Lorem ipsum dolor sit amet, consectetur adipiscing.'),
-                            //style: ElevatedButton.styleFrom(
-                            //onPrimary: Color(0xFF189B17),
-                            //primary: Colors.white),
-                            style: ElevatedButton.styleFrom(
-                                primary: Color(0xFF189B17),
-                                onPrimary: Colors.black,
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: 70, vertical: 15)),
-                          ),
-                        ],
-                      ))
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: <Widget>[
+                              Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceAround,
+                                  children: <Widget>[
+                                    Column(
+                                      children: <Widget>[
+                                        // const SizedBox(
+                                        //   height: 50,
+                                        // ),
+                                        ElevatedButton(
+                                          onPressed: () {},
+                                          child: Text('Voltar'),
+                                          style: ElevatedButton.styleFrom(
+                                              onPrimary: Color(0xFF189B17),
+                                              primary: Colors.white,
+                                              padding: EdgeInsets.symmetric(
+                                                  horizontal: 50,
+                                                  vertical: 15)),
+                                        ),
+                                      ],
+                                    ),
+                                    //const SizedBox(
+                                    //height: 10,
+                                    //),
+                                    Column(children: <Widget>[
+                                      ElevatedButton(
+                                        onPressed: () {},
+                                        child: Text('Avançar'),
+                                        style: ElevatedButton.styleFrom(
+                                            onPrimary: Color(0xFF189B17),
+                                            primary: Colors.white,
+                                            padding: EdgeInsets.symmetric(
+                                                horizontal: 40, vertical: 15)),
+                                      ),
+                                    ])
+                                  ]),
+                              const SizedBox(
+                                height: 40,
+                              ),
+                              ElevatedButton.icon(
+                                onPressed: () {},
+                                icon: Icon(Icons.feedback_outlined),
+                                label: Text(
+                                    'Lorem ipsum dolor sit amet, consectetur adipiscing.'),
+                                //style: ElevatedButton.styleFrom(
+                                //onPrimary: Color(0xFF189B17),
+                                //primary: Colors.white),
+                                style: ElevatedButton.styleFrom(
+                                    primary: Colors.white,
+                                    onPrimary: Colors.black,
+                                    padding: EdgeInsets.symmetric(
+                                        horizontal: 18, vertical: 15)),
+                              ),
+                              ElevatedButton.icon(
+                                onPressed: () {},
+                                icon: Icon(Icons.feedback_outlined),
+                                label: Text(
+                                    'Lorem ipsum dolor sit amet, consectetur adipiscing.'),
+                                //style: ElevatedButton.styleFrom(
+                                //onPrimary: Color(0xFF189B17),
+                                //primary: Colors.white),
+                                style: ElevatedButton.styleFrom(
+                                    primary: Color(0xFF189B17),
+                                    onPrimary: Colors.black,
+                                    padding: EdgeInsets.symmetric(
+                                        horizontal: 18, vertical: 15)),
+                              ),
+                              ElevatedButton.icon(
+                                onPressed: () {},
+                                icon: Icon(Icons.feedback_outlined),
+                                label: Text(
+                                    'Lorem ipsum dolor sit amet, consectetur adipiscing.'),
+                                //style: ElevatedButton.styleFrom(
+                                //onPrimary: Color(0xFF189B17),
+                                //primary: Colors.white),
+                                style: ElevatedButton.styleFrom(
+                                    primary: Colors.white,
+                                    onPrimary: Colors.black,
+                                    padding: EdgeInsets.symmetric(
+                                        horizontal: 18, vertical: 15)),
+                              ),
+                              ElevatedButton.icon(
+                                onPressed: () {},
+                                icon: Icon(Icons.feedback_outlined),
+                                label: Text(
+                                    'Lorem ipsum dolor sit amet, consectetur adipiscing.'),
+                                //style: ElevatedButton.styleFrom(
+                                //onPrimary: Color(0xFF189B17),
+                                //primary: Colors.white),
+                                style: ElevatedButton.styleFrom(
+                                  primary: Color(0xFF189B17),
+                                  onPrimary: Colors.black,
+                                  padding: EdgeInsets.symmetric(
+                                      horizontal: 18, vertical: 15),
+                                ),
+                              ),
+                              ElevatedButton.icon(
+                                onPressed: () {},
+                                icon: Icon(Icons.feedback_outlined),
+                                label: Text(
+                                    'Lorem ipsum dolor sit amet, consectetur adipiscing.'),
+                                //style: ElevatedButton.styleFrom(
+                                //onPrimary: Color(0xFF189B17),
+                                //primary: Colors.white),
+                                style: ElevatedButton.styleFrom(
+                                    primary: Colors.white,
+                                    onPrimary: Colors.black,
+                                    padding: EdgeInsets.symmetric(
+                                        horizontal: 18, vertical: 15)),
+                              ),
+                              ElevatedButton.icon(
+                                onPressed: () {},
+                                icon: Icon(Icons.feedback_outlined),
+                                label: Text(
+                                    'Lorem ipsum dolor sit amet, consectetur adipiscing.'),
+                                //style: ElevatedButton.styleFrom(
+                                //onPrimary: Color(0xFF189B17),
+                                //primary: Colors.white),
+                                style: ElevatedButton.styleFrom(
+                                    primary: Color(0xFF189B17),
+                                    onPrimary: Colors.black,
+                                    padding: EdgeInsets.symmetric(
+                                        horizontal: 18, vertical: 15)),
+                              ),
+                            ],
+                          ))
                     ],
                   ),
                 ),

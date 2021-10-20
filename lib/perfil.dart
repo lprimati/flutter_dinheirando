@@ -40,6 +40,7 @@ class _PerfilPageState extends State<PerfilPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          centerTitle: true,
           title: Text('Perfil'),
           elevation: 0,
           backgroundColor: Color(0xFF189B17),
@@ -98,10 +99,11 @@ class _PerfilPageState extends State<PerfilPage> {
                         children: <Widget>[
                           Column(
                             children: <Widget>[
-                              Icon(
-                                Icons.feedback_outlined,
-                                size: 30,
+                              IconButton(
+                                icon: Icon(Icons.feedback_outlined),
+                                iconSize: 30,
                                 color: Color(0xFF189B17),
+                                onPressed: () {},
                               ),
                               Text(
                                 'Feed',
@@ -113,10 +115,11 @@ class _PerfilPageState extends State<PerfilPage> {
                           ),
                           Column(
                             children: <Widget>[
-                              Icon(
-                                Icons.forum,
-                                size: 30,
+                              IconButton(
+                                icon: Icon(Icons.forum),
+                                iconSize: 30,
                                 color: Color(0xFF189B17),
+                                onPressed: () {},
                               ),
                               Text(
                                 'Fórum',
@@ -134,10 +137,11 @@ class _PerfilPageState extends State<PerfilPage> {
                         children: <Widget>[
                           Column(
                             children: <Widget>[
-                              Icon(
-                                Icons.class_,
-                                size: 30,
+                              IconButton(
+                                icon: Icon(Icons.class_),
+                                iconSize: 30,
                                 color: Color(0xFF189B17),
+                                onPressed: () {},
                               ),
                               Text(
                                 'Aulas',
@@ -149,10 +153,11 @@ class _PerfilPageState extends State<PerfilPage> {
                           ),
                           Column(
                             children: <Widget>[
-                              Icon(
-                                Icons.local_mall,
-                                size: 30,
+                              IconButton(
+                                icon: Icon(Icons.local_mall),
+                                iconSize: 30,
                                 color: Color(0xFF189B17),
+                                onPressed: () {},
                               ),
                               Text(
                                 'Loja',
