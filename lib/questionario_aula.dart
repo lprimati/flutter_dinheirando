@@ -80,14 +80,15 @@ class _PerfilPageState extends State<PerfilPage> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           const SizedBox(
-                            height: 50,
+                            height: 70,
                           ),
                           ElevatedButton(
                             onPressed: () {},
                             child: Text('Gasta'),
                             style: ElevatedButton.styleFrom(
-                              primary: Color(0xFF189B17),
-                            ),
+                                primary: Color(0xFF189B17),
+                                padding: EdgeInsets.symmetric(
+                                    horizontal: 84, vertical: 15)),
                           ),
                           const SizedBox(
                             height: 20,
@@ -96,8 +97,9 @@ class _PerfilPageState extends State<PerfilPage> {
                             onPressed: () {},
                             child: Text('Investe'),
                             style: ElevatedButton.styleFrom(
-                              primary: Color(0xFF189B17),
-                            ),
+                                primary: Color(0xFF189B17),
+                                padding: EdgeInsets.symmetric(
+                                    horizontal: 80, vertical: 15)),
                           ),
                           const SizedBox(
                             height: 20,
@@ -106,8 +108,9 @@ class _PerfilPageState extends State<PerfilPage> {
                             onPressed: () {},
                             child: Text('Guarda'),
                             style: ElevatedButton.styleFrom(
-                              primary: Color(0xFF189B17),
-                            ),
+                                primary: Color(0xFF189B17),
+                                padding: EdgeInsets.symmetric(
+                                    horizontal: 80, vertical: 15)),
                           ),
                           const SizedBox(
                             height: 20,
@@ -116,18 +119,20 @@ class _PerfilPageState extends State<PerfilPage> {
                             onPressed: () {},
                             child: Text('Doa'),
                             style: ElevatedButton.styleFrom(
-                              primary: Color(0xFF189B17),
-                            ),
+                                primary: Color(0xFF189B17),
+                                padding: EdgeInsets.symmetric(
+                                    horizontal: 90, vertical: 15)),
                           ),
                           const SizedBox(
-                            height: 60,
+                            height: 80,
                           ),
                           ElevatedButton(
                             onPressed: () {},
                             child: Text('Avançar'),
                             style: ElevatedButton.styleFrom(
-                              primary: Color(0xFF189B17),
-                            ),
+                                primary: Color(0xFF189B17),
+                                padding: EdgeInsets.symmetric(
+                                    horizontal: 60, vertical: 15)),
                           ),
                         ],
                       ))

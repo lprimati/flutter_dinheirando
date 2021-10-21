@@ -78,31 +78,49 @@ class _PerfilPageState extends State<PerfilPage> {
                         ),
                       ),
                       Container(
-                          child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          const SizedBox(
-                            height: 50,
-                          ),
-                          ElevatedButton(
-                            onPressed: () {},
-                            child: Text('Voltar'),
-                            style: ElevatedButton.styleFrom(
-                              primary: Color(0xFF189B17),
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 10,
-                          ),
-                          ElevatedButton(
-                            onPressed: () {},
-                            child: Text('Próximo'),
-                            style: ElevatedButton.styleFrom(
-                              primary: Color(0xFF189B17),
-                            ),
-                          ),
-                        ],
-                      ))
+                        padding: EdgeInsets.all(32),
+                        child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: <Widget>[
+                              Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceAround,
+                                  children: <Widget>[
+                                    Column(
+                                      children: <Widget>[
+                                        // const SizedBox(
+                                        //   height: 50,
+                                        // ),
+                                        ElevatedButton(
+                                          onPressed: () {},
+                                          child: Text('Voltar'),
+                                          style: ElevatedButton.styleFrom(
+                                              primary: Color(0xFF189B17),
+                                              padding: EdgeInsets.symmetric(
+                                                  horizontal: 50,
+                                                  vertical: 15)),
+                                        ),
+                                      ],
+                                    ),
+                                    // const SizedBox(
+                                    //   height: 10,
+                                    // ),
+                                    Column(
+                                      children: <Widget>[
+                                        ElevatedButton(
+                                          onPressed: () {},
+                                          child: Text('Próximo'),
+                                          style: ElevatedButton.styleFrom(
+                                              primary: Color(0xFF189B17),
+                                              padding: EdgeInsets.symmetric(
+                                                  horizontal: 40,
+                                                  vertical: 15)),
+                                        ),
+                                      ],
+                                    )
+                                  ]),
+                            ]),
+                      ),
                     ],
                   ),
                 ),

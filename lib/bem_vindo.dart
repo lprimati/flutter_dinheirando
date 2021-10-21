@@ -101,14 +101,15 @@ class _PerfilPageState extends State<PerfilPage> {
                       ),
                     ),
                     const SizedBox(
-                      height: 20,
+                      height: 40,
                     ),
                     ElevatedButton(
                       onPressed: () {},
                       child: Text('JÁ POSSUO CADASTRO'),
                       style: ElevatedButton.styleFrom(
-                        primary: Color(0xFF189B17),
-                      ),
+                          primary: Color(0xFF189B17),
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 20, vertical: 15)),
                     ),
                     const SizedBox(
                       height: 20,
@@ -117,9 +118,10 @@ class _PerfilPageState extends State<PerfilPage> {
                       onPressed: () {},
                       child: Text('CADASTRE-SE'),
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.white,
-                        onPrimary: Color(0xFF189B17),
-                      ),
+                          primary: Colors.white,
+                          onPrimary: Color(0xFF189B17),
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 50, vertical: 15)),
                     ),
                   ],
                 ))
