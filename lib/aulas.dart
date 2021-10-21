@@ -1,9 +1,10 @@
-//import 'dart:html';
+import 'dart:html';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_dinheirando/atividades.dart';
 import 'package:flutter_dinheirando/questionario_aula.dart';
+import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 void main() => runApp(AulaVideoApp());
 
@@ -13,12 +14,18 @@ class AulaVideoApp extends StatelessWidget {
     return MaterialApp(
       title: 'Aulas',
       theme: ThemeData(primarySwatch: Colors.deepPurple),
-      home: AulaVideoPage(),
+      home: AulaVideoPage(
+        title: 'video de educaçao',
+        url: 'https://www.youtube.com/watch?v=0-QQLrKvY3k',
+      ),
     );
   }
 }
 
 class AulaVideoPage extends StatefulWidget {
+  AulaVideoPage({this.title, this.url});
+  final String title;
+  final url;
   @override
   State<StatefulWidget> createState() {
     return _AulaVideoPageState();
@@ -26,12 +33,22 @@ class AulaVideoPage extends StatefulWidget {
 }
 
 class _AulaVideoPageState extends State<AulaVideoPage> {
-  get height => null;
+  //get height => null;
+  YoutubePlayerController _controller;
+  void runYoutubePlayer() {
+    _controller = YoutubePlayerController(
+        initialVideoId: YoutubePlayer.convertUrlToId(widget.url),
+        flags: YoutubePlayerFlags(
+          enableCaption: false,
+          isLive: false,
+          autoPlay: true,
+        ));
+  }
 
   //159B06
   @override
   void initState() {
-    SystemChrome.setEnabledSystemUIOverlays([]);
+    runYoutubePlayer();
     super.initState();
   }
 
@@ -71,11 +88,19 @@ class _AulaVideoPageState extends State<AulaVideoPage> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      Container(
-                        width: 300,
-                        height: 300,
-                        child: Image.asset('images/video.png'),
+                      YoutubePlayer(
+                        controller: _controller,
+                        showVideoProgressIndicator: true,
+                        progressIndicatorColor: Colors.blueAccent,
                       ),
+                      SizedBox(
+                        height: 20.0,
+                      ),
+                      // Container(
+                      //   width: 300,
+                      //   height: 300,
+                      //   child: Image.asset('images/video.png'),
+                      // ),
                       Text(
                         'Vídeo Introdução',
                         style: TextStyle(
