@@ -2,28 +2,30 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_dinheirando/atividades.dart';
+import 'package:flutter_dinheirando/aulas.dart';
 
-void main() => runApp(PerfilApp());
+void main() => runApp(QuestionarioApp());
 
-class PerfilApp extends StatelessWidget {
+class QuestionarioApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'questionario',
       theme: ThemeData(primarySwatch: Colors.deepPurple),
-      home: PerfilPage(),
+      home: QuestionarioPage(),
     );
   }
 }
 
-class PerfilPage extends StatefulWidget {
+class QuestionarioPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return _PerfilPageState();
+    return _QuestionarioPageState();
   }
 }
 
-class _PerfilPageState extends State<PerfilPage> {
+class _QuestionarioPageState extends State<QuestionarioPage> {
   get height => null;
 
   //159B06
@@ -42,7 +44,12 @@ class _PerfilPageState extends State<PerfilPage> {
           backgroundColor: Color(0xFF189B17),
           leading: IconButton(
             icon: Icon(Icons.arrow_back_ios),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (BuildContext context) => AulaVideoApp()));
+            },
           ),
           actions: <Widget>[
             IconButton(
@@ -127,7 +134,13 @@ class _PerfilPageState extends State<PerfilPage> {
                             height: 80,
                           ),
                           ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (BuildContext context) =>
+                                          AtividadeApp()));
+                            },
                             child: Text('Avançar'),
                             style: ElevatedButton.styleFrom(
                                 primary: Color(0xFF189B17),

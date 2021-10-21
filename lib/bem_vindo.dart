@@ -2,28 +2,29 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_dinheirando/login.dart';
 
-void main() => runApp(PerfilApp());
+void main() => runApp(BemVindoApp());
 
-class PerfilApp extends StatelessWidget {
+class BemVindoApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'bem vindo',
       theme: ThemeData(primarySwatch: Colors.deepPurple),
-      home: PerfilPage(),
+      home: BemVindoPage(),
     );
   }
 }
 
-class PerfilPage extends StatefulWidget {
+class BemVindoPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return _PerfilPageState();
+    return _BemVindoPageState();
   }
 }
 
-class _PerfilPageState extends State<PerfilPage> {
+class _BemVindoPageState extends State<BemVindoPage> {
   get height => null;
 
   //159B06
@@ -104,7 +105,12 @@ class _PerfilPageState extends State<PerfilPage> {
                       height: 40,
                     ),
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) => LoginApp()));
+                      },
                       child: Text('JÁ POSSUO CADASTRO'),
                       style: ElevatedButton.styleFrom(
                           primary: Color(0xFF189B17),

@@ -2,28 +2,30 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_dinheirando/atividades.dart';
+import 'package:flutter_dinheirando/questionario_aula.dart';
 
-void main() => runApp(PerfilApp());
+void main() => runApp(AulaVideoApp());
 
-class PerfilApp extends StatelessWidget {
+class AulaVideoApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Aulas',
       theme: ThemeData(primarySwatch: Colors.deepPurple),
-      home: PerfilPage(),
+      home: AulaVideoPage(),
     );
   }
 }
 
-class PerfilPage extends StatefulWidget {
+class AulaVideoPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return _PerfilPageState();
+    return _AulaVideoPageState();
   }
 }
 
-class _PerfilPageState extends State<PerfilPage> {
+class _AulaVideoPageState extends State<AulaVideoPage> {
   get height => null;
 
   //159B06
@@ -42,7 +44,12 @@ class _PerfilPageState extends State<PerfilPage> {
           backgroundColor: Color(0xFF189B17),
           leading: IconButton(
             icon: Icon(Icons.arrow_back_ios),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (BuildContext context) => AtividadeApp()));
+            },
           ),
           actions: <Widget>[
             IconButton(
@@ -92,7 +99,14 @@ class _PerfilPageState extends State<PerfilPage> {
                                         //   height: 50,
                                         // ),
                                         ElevatedButton(
-                                          onPressed: () {},
+                                          onPressed: () {
+                                            Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                    builder: (BuildContext
+                                                            context) =>
+                                                        AtividadeApp()));
+                                          },
                                           child: Text('Voltar'),
                                           style: ElevatedButton.styleFrom(
                                               primary: Color(0xFF189B17),
@@ -108,7 +122,14 @@ class _PerfilPageState extends State<PerfilPage> {
                                     Column(
                                       children: <Widget>[
                                         ElevatedButton(
-                                          onPressed: () {},
+                                          onPressed: () {
+                                            Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                    builder: (BuildContext
+                                                            context) =>
+                                                        QuestionarioApp()));
+                                          },
                                           child: Text('Próximo'),
                                           style: ElevatedButton.styleFrom(
                                               primary: Color(0xFF189B17),

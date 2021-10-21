@@ -2,28 +2,30 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_dinheirando/perfil.dart';
+import 'package:flutter_dinheirando/aulas.dart';
 
-void main() => runApp(PerfilApp());
+void main() => runApp(AtividadeApp());
 
-class PerfilApp extends StatelessWidget {
+class AtividadeApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Atividades',
       theme: ThemeData(primarySwatch: Colors.deepPurple),
-      home: PerfilPage(),
+      home: AtividadePage(),
     );
   }
 }
 
-class PerfilPage extends StatefulWidget {
+class AtividadePage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return _PerfilPageState();
+    return _AtividadePageState();
   }
 }
 
-class _PerfilPageState extends State<PerfilPage> {
+class _AtividadePageState extends State<AtividadePage> {
   get height => null;
 
   //159B06
@@ -43,7 +45,12 @@ class _PerfilPageState extends State<PerfilPage> {
           backgroundColor: Color(0xFF189B17),
           leading: IconButton(
             icon: Icon(Icons.arrow_back_ios),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (BuildContext context) => PerfilApp()));
+            },
           ),
           actions: <Widget>[
             IconButton(
@@ -69,7 +76,13 @@ class _PerfilPageState extends State<PerfilPage> {
                         height: 180,
                       ),
                       ElevatedButton.icon(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (BuildContext context) =>
+                                      AulaVideoApp()));
+                        },
                         icon: Image.asset(
                           'images/atividade1.png',
                           height: 100,

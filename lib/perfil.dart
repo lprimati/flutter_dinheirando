@@ -2,6 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_dinheirando/atividades.dart';
+import 'package:flutter_dinheirando/forum.dart';
+import 'package:flutter_dinheirando/loja.dart';
 
 void main() => runApp(PerfilApp());
 
@@ -119,7 +122,13 @@ class _PerfilPageState extends State<PerfilPage> {
                                 icon: Icon(Icons.forum),
                                 iconSize: 30,
                                 color: Color(0xFF189B17),
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (BuildContext context) =>
+                                              ForumApp()));
+                                },
                               ),
                               Text(
                                 'Fórum',
@@ -141,7 +150,13 @@ class _PerfilPageState extends State<PerfilPage> {
                                 icon: Icon(Icons.class_),
                                 iconSize: 30,
                                 color: Color(0xFF189B17),
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (BuildContext context) =>
+                                              AtividadeApp()));
+                                },
                               ),
                               Text(
                                 'Aulas',
@@ -157,7 +172,13 @@ class _PerfilPageState extends State<PerfilPage> {
                                 icon: Icon(Icons.local_mall),
                                 iconSize: 30,
                                 color: Color(0xFF189B17),
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (BuildContext context) =>
+                                              LojaApp()));
+                                },
                               ),
                               Text(
                                 'Loja',

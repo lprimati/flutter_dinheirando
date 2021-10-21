@@ -2,28 +2,29 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_dinheirando/perfil.dart';
 
-void main() => runApp(PerfilApp());
+void main() => runApp(LojaApp());
 
-class PerfilApp extends StatelessWidget {
+class LojaApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Loja',
       theme: ThemeData(primarySwatch: Colors.deepPurple),
-      home: PerfilPage(),
+      home: LojaPage(),
     );
   }
 }
 
-class PerfilPage extends StatefulWidget {
+class LojaPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return _PerfilPageState();
+    return _LojaPageState();
   }
 }
 
-class _PerfilPageState extends State<PerfilPage> {
+class _LojaPageState extends State<LojaPage> {
   get height => null;
 
   //159B06
@@ -43,7 +44,12 @@ class _PerfilPageState extends State<PerfilPage> {
           backgroundColor: Color(0xFF189B17),
           leading: IconButton(
             icon: Icon(Icons.arrow_back_ios),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (BuildContext context) => PerfilApp()));
+            },
           ),
           actions: <Widget>[
             IconButton(

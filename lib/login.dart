@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+//import 'package:flutter_dinheirando/aulas.dart';
+import 'package:flutter_dinheirando/perfil.dart';
 
 void main() => runApp(LoginApp());
 
@@ -24,6 +26,8 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  String email = '';
+  String senha = '';
   //159B06
   @override
   void initState() {
@@ -80,81 +84,115 @@ class _LoginPageState extends State<LoginPage> {
               Container(
                 height: MediaQuery.of(context).size.width / 1.5,
                 width: MediaQuery.of(context).size.width,
-                padding: EdgeInsets.only(top: 62),
-                child: Column(
-                  children: <Widget>[
-                    Container(
-                      width: MediaQuery.of(context).size.width / 1.2,
-                      height: 45,
-                      padding: EdgeInsets.only(
-                          top: 4, left: 16, right: 16, bottom: 4),
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(50)),
-                          color: Colors.white,
-                          boxShadow: [
-                            BoxShadow(color: Colors.black12, blurRadius: 5)
-                          ]),
-                      child: TextField(
+                //padding: EdgeInsets.only(top: 62),
+                child: Padding(
+                  padding: const EdgeInsets.all(50.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      TextField(
+                        onChanged: (text) {
+                          email = text;
+                        },
+                        keyboardType: TextInputType.emailAddress,
                         decoration: InputDecoration(
-                          icon: Icon(
-                            Icons.email,
-                            color: Colors.grey,
-                          ),
-                          hintText: 'Email',
-                        ),
+                            labelText: 'Email', border: OutlineInputBorder()),
                       ),
-                    ),
-                    Container(
-                      width: MediaQuery.of(context).size.width / 1.2,
-                      height: 45,
-                      margin: EdgeInsets.only(top: 32),
-                      padding: EdgeInsets.only(
-                          top: 4, left: 16, right: 16, bottom: 4),
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(50)),
-                          color: Colors.white,
-                          boxShadow: [
-                            BoxShadow(color: Colors.black12, blurRadius: 5)
-                          ]),
-                      child: TextField(
+                      SizedBox(
+                        height: 20,
+                      ),
+                      TextField(
+                        onChanged: (text) {
+                          senha = text;
+                        },
+                        obscureText: true,
                         decoration: InputDecoration(
-                          icon: Icon(
-                            Icons.vpn_key,
-                            color: Colors.grey,
+                            labelText: 'Senha', border: OutlineInputBorder()),
+                      ),
+                      // Container(
+                      //   width: MediaQuery.of(context).size.width / 1.2,
+                      //   height: 45,
+                      //   padding: EdgeInsets.only(
+                      //       top: 4, left: 16, right: 16, bottom: 4),
+                      //   decoration: BoxDecoration(
+                      //       borderRadius: BorderRadius.all(Radius.circular(50)),
+                      //       color: Colors.white,
+                      //       boxShadow: [
+                      //         BoxShadow(color: Colors.black12, blurRadius: 5)
+                      //       ]),
+                      //   child: TextField(
+                      //     decoration: InputDecoration(
+                      //       icon: Icon(
+                      //         Icons.email,
+                      //         color: Colors.grey,
+                      //       ),
+                      //       hintText: 'Email',
+                      //     ),
+                      //   ),
+                      // ),
+                      // Container(
+                      //   width: MediaQuery.of(context).size.width / 1.2,
+                      //   height: 45,
+                      //   margin: EdgeInsets.only(top: 32),
+                      //   padding: EdgeInsets.only(
+                      //       top: 4, left: 16, right: 16, bottom: 4),
+                      //   decoration: BoxDecoration(
+                      //       borderRadius: BorderRadius.all(Radius.circular(50)),
+                      //       color: Colors.white,
+                      //       boxShadow: [
+                      //         BoxShadow(color: Colors.black12, blurRadius: 5)
+                      //       ]),
+                      //   child: TextField(
+                      //     decoration: InputDecoration(
+                      //       icon: Icon(
+                      //         Icons.vpn_key,
+                      //         color: Colors.grey,
+                      //       ),
+                      //       hintText: 'Senha',
+                      //     ),
+                      //   ),
+                      // ),
+                      Align(
+                        alignment: Alignment.centerRight,
+                        child: Padding(
+                          padding: const EdgeInsets.only(top: 16, right: 32),
+                          child: Text(
+                            'Esqueceu Sua Senha?',
+                            style: TextStyle(color: Colors.grey),
                           ),
-                          hintText: 'Senha',
                         ),
                       ),
-                    ),
-                    Align(
-                      alignment: Alignment.centerRight,
-                      child: Padding(
-                        padding: const EdgeInsets.only(top: 16, right: 32),
-                        child: Text(
-                          'Esqueceu Sua Senha?',
-                          style: TextStyle(color: Colors.grey),
-                        ),
-                      ),
-                    ),
-                    Spacer(),
-                    Container(
-                        child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        const SizedBox(
-                          height: 45,
-                        ),
-                        ElevatedButton(
-                          onPressed: () {},
-                          child: Text('LOGIN'),
-                          style: ElevatedButton.styleFrom(
-                              primary: Color(0xFF159B06),
-                              padding: EdgeInsets.symmetric(
-                                  horizontal: 80, vertical: 15)),
-                        )
-                      ],
-                    ))
-                  ],
+                      Spacer(),
+                      Container(
+                          child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          const SizedBox(
+                            height: 45,
+                          ),
+                          ElevatedButton(
+                            onPressed: () {
+                              if (email == 'dinheirando@hotmail.com' &&
+                                  senha == '123') {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (BuildContext context) =>
+                                            PerfilApp()));
+                              } else {
+                                print('login invalido');
+                              }
+                            },
+                            child: Text('LOGIN'),
+                            style: ElevatedButton.styleFrom(
+                                primary: Color(0xFF159B06),
+                                padding: EdgeInsets.symmetric(
+                                    horizontal: 80, vertical: 15)),
+                          )
+                        ],
+                      ))
+                    ],
+                  ),
                 ),
               ),
             ],
