@@ -1,7 +1,7 @@
-import 'dart:html';
+//import 'dart:html';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+//import 'package:flutter/services.dart';
 import 'package:flutter_dinheirando/atividades.dart';
 import 'package:flutter_dinheirando/questionario_aula.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
@@ -48,8 +48,8 @@ class _AulaVideoPageState extends State<AulaVideoPage> {
   //159B06
   @override
   void initState() {
-    runYoutubePlayer();
     super.initState();
+    runYoutubePlayer();
   }
 
   @override
