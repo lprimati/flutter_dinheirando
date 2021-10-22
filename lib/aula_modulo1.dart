@@ -6,15 +6,15 @@ import 'package:flutter_dinheirando/atividades.dart';
 import 'package:flutter_dinheirando/questionario_aula.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
-void main() => runApp(AulaVideoApp());
+void main() => runApp(VideoModulo1App());
 
-class AulaVideoApp extends StatelessWidget {
+class VideoModulo1App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Aulas',
       theme: ThemeData(primarySwatch: Colors.deepPurple),
-      home: AulaVideoPage(
+      home: VideoModulo1Page(
         title: 'video de educaçao',
         url: 'https://www.youtube.com/watch?v=0-QQLrKvY3k',
       ),
@@ -22,17 +22,17 @@ class AulaVideoApp extends StatelessWidget {
   }
 }
 
-class AulaVideoPage extends StatefulWidget {
-  AulaVideoPage({this.title, this.url});
+class VideoModulo1Page extends StatefulWidget {
+  VideoModulo1Page({this.title, this.url});
   final String title;
   final url;
   @override
   State<StatefulWidget> createState() {
-    return _AulaVideoPageState();
+    return _VideoModulo1PageState();
   }
 }
 
-class _AulaVideoPageState extends State<AulaVideoPage> {
+class _VideoModulo1PageState extends State<VideoModulo1Page> {
   //get height => null;
   YoutubePlayerController _controller;
   void runYoutubePlayer() {
@@ -158,7 +158,7 @@ class _AulaVideoPageState extends State<AulaVideoPage> {
                                                 MaterialPageRoute(
                                                     builder: (BuildContext
                                                             context) =>
-                                                        QuestionarioApp()));
+                                                        QuestionarioModulo1App()));
                                           },
                                           child: Text('Próximo'),
                                           style: ElevatedButton.styleFrom(

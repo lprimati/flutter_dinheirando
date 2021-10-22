@@ -3,17 +3,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_dinheirando/atividades.dart';
-import 'package:flutter_dinheirando/aulas.dart';
+import 'package:flutter_dinheirando/aula_modulo1.dart';
 
-void main() => runApp(QuestionarioApp());
+void main() => runApp(QuestionarioModulo1App());
 
-class QuestionarioApp extends StatelessWidget {
+class QuestionarioModulo1App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'questionario',
       theme: ThemeData(primarySwatch: Colors.deepPurple),
-      home: QuestionarioPage(),
+      home: QuestionarioModulo1Page(),
     );
   }
 }
@@ -60,14 +60,14 @@ createErradoDialog(BuildContext context) {
       });
 }
 
-class QuestionarioPage extends StatefulWidget {
+class QuestionarioModulo1Page extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return _QuestionarioPageState();
+    return _QuestionarioModulo1PageState();
   }
 }
 
-class _QuestionarioPageState extends State<QuestionarioPage> {
+class _QuestionarioModulo1PageState extends State<QuestionarioModulo1Page> {
   get height => null;
 
   //159B06
@@ -90,7 +90,7 @@ class _QuestionarioPageState extends State<QuestionarioPage> {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (BuildContext context) => AulaVideoApp()));
+                      builder: (BuildContext context) => VideoModulo1App()));
             },
           ),
           actions: <Widget>[
@@ -122,7 +122,7 @@ class _QuestionarioPageState extends State<QuestionarioPage> {
                         height: 60,
                       ),
                       Text(
-                        'O que não deve entrar no seu orçamento do mês?',
+                        'A melhor conduta com o seu dinheiro no mês, de acordo com a aula, seria:',
                         style: TextStyle(
                           color: Color(0xFF189B17),
                           fontSize: 24,
@@ -137,10 +137,9 @@ class _QuestionarioPageState extends State<QuestionarioPage> {
                             height: 70,
                           ),
                           ElevatedButton(
-                            onPressed: () {
-                              createAlertDialog(context);
-                            },
-                            child: Text('Compras do mês'),
+                            onPressed: () {},
+                            child: Text(
+                                ' Realizar seus gastos normalmente ao longo do mês, e ao final poupar o restante'),
                             style: ElevatedButton.styleFrom(
                                 primary: Color(0xFF189B17),
                                 padding: EdgeInsets.symmetric(
@@ -150,10 +149,9 @@ class _QuestionarioPageState extends State<QuestionarioPage> {
                             height: 20,
                           ),
                           ElevatedButton(
-                            onPressed: () {
-                              createErradoDialog(context);
-                            },
-                            child: Text(''),
+                            onPressed: () {},
+                            child: Text(
+                                'Separar o valor que vai poupar durante o mês, depois de alguns gastos necessários'),
                             style: ElevatedButton.styleFrom(
                                 primary: Color(0xFF189B17),
                                 padding: EdgeInsets.symmetric(

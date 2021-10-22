@@ -3,7 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_dinheirando/perfil.dart';
-import 'package:flutter_dinheirando/aulas.dart';
+import 'package:flutter_dinheirando/aula_modulo1.dart';
+import 'package:flutter_dinheirando/aula_modulo2.dart';
 
 void main() => runApp(AtividadeApp());
 
@@ -75,65 +76,223 @@ class _AtividadePageState extends State<AtividadePage> {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
                       const SizedBox(
-                        height: 180,
+                        height: 40,
                       ),
-                      ElevatedButton.icon(
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (BuildContext context) =>
-                                      AulaVideoApp()));
-                        },
-                        icon: Image.asset(
-                          'images/atividade1.png',
-                          height: 100,
-                          width: 100,
-                        ),
-                        label: Text(
-                          '',
-                        ),
-                        style: ElevatedButton.styleFrom(
-                          primary: Colors.white,
-                          onPrimary: Colors.black,
-                        ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: <Widget>[
+                          Column(
+                            children: <Widget>[
+                              ElevatedButton.icon(
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (BuildContext context) =>
+                                              VideoModulo1App()));
+                                },
+                                icon: Image.asset(
+                                  'images/1.png',
+                                  height: 100,
+                                  width: 100,
+                                ),
+                                label: Text(
+                                  '',
+                                ),
+                                style: ElevatedButton.styleFrom(
+                                  primary: Colors.white,
+                                  onPrimary: Colors.black,
+                                ),
+                              ),
+                              Text(
+                                'Modulo 1',
+                                style: TextStyle(
+                                  color: Color(0xFF189B17),
+                                  fontSize: 24,
+                                  //fontWeight: FontWeight.bold
+                                ),
+                              ),
+                            ],
+                          ),
+                          Column(
+                            children: <Widget>[
+                              ElevatedButton.icon(
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (BuildContext context) =>
+                                              VideoModulo2App()));
+                                },
+                                icon: Image.asset(
+                                  'images/2.png',
+                                  height: 100,
+                                  width: 100,
+                                ),
+                                label: Text(
+                                  '',
+                                ),
+                                style: ElevatedButton.styleFrom(
+                                  primary: Colors.white,
+                                  onPrimary: Colors.black,
+                                ),
+                              ),
+                              Text(
+                                'Modulo 2',
+                                style: TextStyle(
+                                  color: Color(0xFF189B17),
+                                  fontSize: 24,
+                                  //fontWeight: FontWeight.bold
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
                       ),
-                      Text(
-                        'Atividade 1',
-                        style: TextStyle(
-                          color: Color(0xFF189B17),
-                          fontSize: 24,
-                          //fontWeight: FontWeight.bold
-                        ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: <Widget>[
+                          Column(
+                            children: <Widget>[
+                              ElevatedButton.icon(
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (BuildContext context) =>
+                                              VideoModulo1App()));
+                                },
+                                icon: Image.asset(
+                                  'images/3.png',
+                                  height: 100,
+                                  width: 100,
+                                ),
+                                label: Text(
+                                  '',
+                                ),
+                                style: ElevatedButton.styleFrom(
+                                  primary: Colors.white,
+                                  onPrimary: Colors.black,
+                                ),
+                              ),
+                              Text(
+                                'Modulo 3',
+                                style: TextStyle(
+                                  color: Color(0xFF189B17),
+                                  fontSize: 24,
+                                  //fontWeight: FontWeight.bold
+                                ),
+                              ),
+                            ],
+                          ),
+                          Column(
+                            children: <Widget>[
+                              ElevatedButton.icon(
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (BuildContext context) =>
+                                              VideoModulo2App()));
+                                },
+                                icon: Image.asset(
+                                  'images/4.png',
+                                  height: 100,
+                                  width: 100,
+                                ),
+                                label: Text(
+                                  '',
+                                ),
+                                style: ElevatedButton.styleFrom(
+                                  primary: Colors.white,
+                                  onPrimary: Colors.black,
+                                ),
+                              ),
+                              Text(
+                                'Modulo 4',
+                                style: TextStyle(
+                                  color: Color(0xFF189B17),
+                                  fontSize: 24,
+                                  //fontWeight: FontWeight.bold
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
                       ),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      ElevatedButton.icon(
-                        onPressed: () {},
-                        icon: Image.asset(
-                          'images/atividade2.png',
-                          height: 100,
-                          width: 100,
-                        ),
-                        label: Text(
-                          '',
-                        ),
-                        style: ElevatedButton.styleFrom(
-                          primary: Colors.white,
-                          onPrimary: Colors.black,
-                        ),
-                      ),
-                      Text(
-                        'Atividade 2',
-                        style: TextStyle(
-                          color: Color(0xFF189B17),
-                          fontSize: 24,
-                          //fontWeight: FontWeight.bold
-                        ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: <Widget>[
+                          Column(
+                            children: <Widget>[
+                              ElevatedButton.icon(
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (BuildContext context) =>
+                                              VideoModulo1App()));
+                                },
+                                icon: Image.asset(
+                                  'images/5.png',
+                                  height: 100,
+                                  width: 100,
+                                ),
+                                label: Text(
+                                  '',
+                                ),
+                                style: ElevatedButton.styleFrom(
+                                  primary: Colors.white,
+                                  onPrimary: Colors.black,
+                                ),
+                              ),
+                              Text(
+                                'Modulo 5',
+                                style: TextStyle(
+                                  color: Color(0xFF189B17),
+                                  fontSize: 24,
+                                  //fontWeight: FontWeight.bold
+                                ),
+                              ),
+                            ],
+                          ),
+                          Column(
+                            children: <Widget>[
+                              ElevatedButton.icon(
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (BuildContext context) =>
+                                              VideoModulo2App()));
+                                },
+                                icon: Image.asset(
+                                  'images/6.png',
+                                  height: 100,
+                                  width: 100,
+                                ),
+                                label: Text(
+                                  '',
+                                ),
+                                style: ElevatedButton.styleFrom(
+                                  primary: Colors.white,
+                                  onPrimary: Colors.black,
+                                ),
+                              ),
+                              Text(
+                                'Modulo 6',
+                                style: TextStyle(
+                                  color: Color(0xFF189B17),
+                                  fontSize: 24,
+                                  //fontWeight: FontWeight.bold
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
                       ),
                     ],
                   ),
