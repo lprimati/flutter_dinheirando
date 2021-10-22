@@ -18,6 +18,48 @@ class QuestionarioApp extends StatelessWidget {
   }
 }
 
+createAlertDialog(BuildContext context) {
+  TextEditingController customController = TextEditingController();
+
+  return showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: Text('Acertou'),
+          actions: <Widget>[
+            MaterialButton(
+              elevation: 5.0,
+              child: Text('voltar'),
+              onPressed: () {
+                Navigator.of(context).pop(customController.text.toString());
+              },
+            )
+          ],
+        );
+      });
+}
+
+createErradoDialog(BuildContext context) {
+  TextEditingController customController = TextEditingController();
+
+  return showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: Text('Errado'),
+          actions: <Widget>[
+            MaterialButton(
+              elevation: 5.0,
+              child: Text('voltar'),
+              onPressed: () {
+                Navigator.of(context).pop(customController.text.toString());
+              },
+            )
+          ],
+        );
+      });
+}
+
 class QuestionarioPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
@@ -61,7 +103,12 @@ class _QuestionarioPageState extends State<QuestionarioPage> {
         body: Stack(
           fit: StackFit.expand,
           children: <Widget>[
-            Image(image: AssetImage('assets/images/proj_tcc_08.jpg')),
+            Image(
+              image: AssetImage('assets/images/proj_tcc_08.jpg'),
+              height: double.infinity,
+              width: double.infinity,
+              fit: BoxFit.fill,
+            ),
             SingleChildScrollView(
               child: SizedBox(
                 width: MediaQuery.of(context).size.width,
@@ -75,7 +122,7 @@ class _QuestionarioPageState extends State<QuestionarioPage> {
                         height: 60,
                       ),
                       Text(
-                        'Se você possui dinheiro, você...',
+                        'O que não deve entrar no seu orçamento do mês?',
                         style: TextStyle(
                           color: Color(0xFF189B17),
                           fontSize: 24,
@@ -90,8 +137,10 @@ class _QuestionarioPageState extends State<QuestionarioPage> {
                             height: 70,
                           ),
                           ElevatedButton(
-                            onPressed: () {},
-                            child: Text('Gasta'),
+                            onPressed: () {
+                              createAlertDialog(context);
+                            },
+                            child: Text('Compras do mês'),
                             style: ElevatedButton.styleFrom(
                                 primary: Color(0xFF189B17),
                                 padding: EdgeInsets.symmetric(
@@ -101,8 +150,10 @@ class _QuestionarioPageState extends State<QuestionarioPage> {
                             height: 20,
                           ),
                           ElevatedButton(
-                            onPressed: () {},
-                            child: Text('Investe'),
+                            onPressed: () {
+                              createErradoDialog(context);
+                            },
+                            child: Text(''),
                             style: ElevatedButton.styleFrom(
                                 primary: Color(0xFF189B17),
                                 padding: EdgeInsets.symmetric(
@@ -113,7 +164,7 @@ class _QuestionarioPageState extends State<QuestionarioPage> {
                           ),
                           ElevatedButton(
                             onPressed: () {},
-                            child: Text('Guarda'),
+                            child: Text('Entreterimento'),
                             style: ElevatedButton.styleFrom(
                                 primary: Color(0xFF189B17),
                                 padding: EdgeInsets.symmetric(

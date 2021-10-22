@@ -53,7 +53,12 @@ class _BemVindoPageState extends State<BemVindoPage> {
         //],
         //),
         body: Stack(fit: StackFit.expand, children: <Widget>[
-      Image(image: AssetImage('assets/images/proj_tcc_08.jpg')),
+      Image(
+        image: AssetImage('images/proj_tcc_08.jpg'),
+        height: double.infinity,
+        width: double.infinity,
+        fit: BoxFit.fill,
+      ),
       SingleChildScrollView(
         child: SizedBox(
           width: MediaQuery.of(context).size.width,
