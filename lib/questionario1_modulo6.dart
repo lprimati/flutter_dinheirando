@@ -81,7 +81,8 @@ class _Questionario1Modulo6PageState extends State<Questionario1Modulo6Page> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Aulas          5'),
+          centerTitle: true,
+          title: Text('Modulo 6'),
           elevation: 0,
           backgroundColor: Color(0xFF189B17),
           leading: IconButton(

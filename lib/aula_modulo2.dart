@@ -56,7 +56,8 @@ class _VideoModulo2PageState extends State<VideoModulo2Page> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Aulas          5'),
+          centerTitle: true,
+          title: Text('Modulo 2'),
           elevation: 0,
           backgroundColor: Color(0xFF189B17),
           leading: IconButton(
