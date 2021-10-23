@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 //import 'package:flutter/services.dart';
 import 'package:flutter_dinheirando/atividades.dart';
-import 'package:flutter_dinheirando/questionario_aula.dart';
+import 'package:flutter_dinheirando/questionario1_modulo1.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 void main() => runApp(VideoModulo1App());
@@ -107,7 +107,7 @@ class _VideoModulo1PageState extends State<VideoModulo1Page> {
                       //   child: Image.asset('images/video.png'),
                       // ),
                       Text(
-                        'Vídeo Introdução',
+                        'Nossa Relação com o Dinheiro',
                         style: TextStyle(
                           color: Color(0xFF189B17),
                           fontSize: 24,
@@ -158,7 +158,7 @@ class _VideoModulo1PageState extends State<VideoModulo1Page> {
                                                 MaterialPageRoute(
                                                     builder: (BuildContext
                                                             context) =>
-                                                        QuestionarioModulo1App()));
+                                                        Questionario1Modulo1App()));
                                           },
                                           child: Text('Próximo'),
                                           style: ElevatedButton.styleFrom(

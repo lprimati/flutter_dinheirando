@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 //import 'package:flutter/services.dart';
 import 'package:flutter_dinheirando/atividades.dart';
-import 'package:flutter_dinheirando/questionario_aula.dart';
+import 'package:flutter_dinheirando/questionario1_modulo6.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 void main() => runApp(VideoModulo6App());
@@ -16,7 +16,7 @@ class VideoModulo6App extends StatelessWidget {
       theme: ThemeData(primarySwatch: Colors.deepPurple),
       home: VideoModulo6Page(
         title: 'video de educaçao',
-        url: 'https://www.youtube.com/watch?v=0-QQLrKvY3k',
+        url: 'https://www.youtube.com/watch?v=O5qvetaDVAk',
       ),
     );
   }
@@ -107,7 +107,7 @@ class _VideoModulo6PageState extends State<VideoModulo6Page> {
                       //   child: Image.asset('images/video.png'),
                       // ),
                       Text(
-                        'Vídeo Introdução',
+                        'Prevenção e Proteção',
                         style: TextStyle(
                           color: Color(0xFF189B17),
                           fontSize: 24,
@@ -158,7 +158,7 @@ class _VideoModulo6PageState extends State<VideoModulo6Page> {
                                                 MaterialPageRoute(
                                                     builder: (BuildContext
                                                             context) =>
-                                                        QuestionarioModulo1App()));
+                                                        Questionario1Modulo6App()));
                                           },
                                           child: Text('Próximo'),
                                           style: ElevatedButton.styleFrom(

@@ -5,15 +5,15 @@ import 'package:flutter/services.dart';
 import 'package:flutter_dinheirando/atividades.dart';
 import 'package:flutter_dinheirando/aula_modulo1.dart';
 
-void main() => runApp(QuestionarioModulo1App());
+void main() => runApp(Questionario1Modulo3App());
 
-class QuestionarioModulo1App extends StatelessWidget {
+class Questionario1Modulo3App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'questionario',
       theme: ThemeData(primarySwatch: Colors.deepPurple),
-      home: QuestionarioModulo1Page(),
+      home: Questionario1Modulo3Page(),
     );
   }
 }
@@ -60,14 +60,14 @@ createErradoDialog(BuildContext context) {
       });
 }
 
-class QuestionarioModulo1Page extends StatefulWidget {
+class Questionario1Modulo3Page extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return _QuestionarioModulo1PageState();
+    return _Questionario1Modulo3PageState();
   }
 }
 
-class _QuestionarioModulo1PageState extends State<QuestionarioModulo1Page> {
+class _Questionario1Modulo3PageState extends State<Questionario1Modulo3Page> {
   get height => null;
 
   //159B06

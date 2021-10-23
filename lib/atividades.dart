@@ -5,6 +5,10 @@ import 'package:flutter/services.dart';
 import 'package:flutter_dinheirando/perfil.dart';
 import 'package:flutter_dinheirando/aula_modulo1.dart';
 import 'package:flutter_dinheirando/aula_modulo2.dart';
+import 'package:flutter_dinheirando/aula_modulo3.dart';
+import 'package:flutter_dinheirando/aula_modulo4.dart';
+import 'package:flutter_dinheirando/aula_modulo5.dart';
+import 'package:flutter_dinheirando/aula_modulo6.dart';
 
 void main() => runApp(AtividadeApp());
 
@@ -107,6 +111,9 @@ class _AtividadePageState extends State<AtividadePage> {
                                   onPrimary: Colors.black,
                                 ),
                               ),
+                              SizedBox(
+                                height: 10.0,
+                              ),
                               Text(
                                 'Modulo 1',
                                 style: TextStyle(
@@ -140,6 +147,9 @@ class _AtividadePageState extends State<AtividadePage> {
                                   onPrimary: Colors.black,
                                 ),
                               ),
+                              SizedBox(
+                                height: 10.0,
+                              ),
                               Text(
                                 'Modulo 2',
                                 style: TextStyle(
@@ -152,6 +162,9 @@ class _AtividadePageState extends State<AtividadePage> {
                           ),
                         ],
                       ),
+                      const SizedBox(
+                        height: 40,
+                      ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: <Widget>[
@@ -163,7 +176,7 @@ class _AtividadePageState extends State<AtividadePage> {
                                       context,
                                       MaterialPageRoute(
                                           builder: (BuildContext context) =>
-                                              VideoModulo1App()));
+                                              VideoModulo3App()));
                                 },
                                 icon: Image.asset(
                                   'images/3.png',
@@ -177,6 +190,9 @@ class _AtividadePageState extends State<AtividadePage> {
                                   primary: Colors.white,
                                   onPrimary: Colors.black,
                                 ),
+                              ),
+                              SizedBox(
+                                height: 10.0,
                               ),
                               Text(
                                 'Modulo 3',
@@ -196,7 +212,7 @@ class _AtividadePageState extends State<AtividadePage> {
                                       context,
                                       MaterialPageRoute(
                                           builder: (BuildContext context) =>
-                                              VideoModulo2App()));
+                                              VideoModulo4App()));
                                 },
                                 icon: Image.asset(
                                   'images/4.png',
@@ -211,6 +227,9 @@ class _AtividadePageState extends State<AtividadePage> {
                                   onPrimary: Colors.black,
                                 ),
                               ),
+                              SizedBox(
+                                height: 10.0,
+                              ),
                               Text(
                                 'Modulo 4',
                                 style: TextStyle(
@@ -223,6 +242,9 @@ class _AtividadePageState extends State<AtividadePage> {
                           ),
                         ],
                       ),
+                      const SizedBox(
+                        height: 40,
+                      ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: <Widget>[
@@ -234,7 +256,7 @@ class _AtividadePageState extends State<AtividadePage> {
                                       context,
                                       MaterialPageRoute(
                                           builder: (BuildContext context) =>
-                                              VideoModulo1App()));
+                                              VideoModulo5App()));
                                 },
                                 icon: Image.asset(
                                   'images/5.png',
@@ -248,6 +270,9 @@ class _AtividadePageState extends State<AtividadePage> {
                                   primary: Colors.white,
                                   onPrimary: Colors.black,
                                 ),
+                              ),
+                              SizedBox(
+                                height: 10.0,
                               ),
                               Text(
                                 'Modulo 5',
@@ -267,7 +292,7 @@ class _AtividadePageState extends State<AtividadePage> {
                                       context,
                                       MaterialPageRoute(
                                           builder: (BuildContext context) =>
-                                              VideoModulo2App()));
+                                              VideoModulo6App()));
                                 },
                                 icon: Image.asset(
                                   'images/6.png',
@@ -281,6 +306,9 @@ class _AtividadePageState extends State<AtividadePage> {
                                   primary: Colors.white,
                                   onPrimary: Colors.black,
                                 ),
+                              ),
+                              SizedBox(
+                                height: 10.0,
                               ),
                               Text(
                                 'Modulo 6',
