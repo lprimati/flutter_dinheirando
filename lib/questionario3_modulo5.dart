@@ -2,19 +2,20 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+
 import 'package:flutter_dinheirando/aula_modulo1.dart';
-import 'package:flutter_dinheirando/questionario3_modulo1.dart';
-import 'package:flutter_dinheirando/resultado_modulo1.dart';
+import 'package:flutter_dinheirando/questionario2_modulo5.dart';
+import 'package:flutter_dinheirando/questionario4_modulo5.dart';
 
-void main() => runApp(Questionario4Modulo1App());
+void main() => runApp(Questionario3Modulo5App());
 
-class Questionario4Modulo1App extends StatelessWidget {
+class Questionario3Modulo5App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'questionario',
       theme: ThemeData(primarySwatch: Colors.deepPurple),
-      home: Questionario4Modulo1Page(),
+      home: Questionario3Modulo5Page(),
     );
   }
 }
@@ -61,14 +62,14 @@ createErradoDialog(BuildContext context) {
       });
 }
 
-class Questionario4Modulo1Page extends StatefulWidget {
+class Questionario3Modulo5Page extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return _Questionario4Modulo1PageState();
+    return _Questionario3Modulo5PageState();
   }
 }
 
-class _Questionario4Modulo1PageState extends State<Questionario4Modulo1Page> {
+class _Questionario3Modulo5PageState extends State<Questionario3Modulo5Page> {
   get height => null;
 
   //159B06
@@ -83,7 +84,7 @@ class _Questionario4Modulo1PageState extends State<Questionario4Modulo1Page> {
     return Scaffold(
         appBar: AppBar(
           centerTitle: true,
-          title: Text('Modulo 1'),
+          title: Text('Modulo 5'),
           elevation: 0,
           backgroundColor: Color(0xFF189B17),
           leading: IconButton(
@@ -124,7 +125,7 @@ class _Questionario4Modulo1PageState extends State<Questionario4Modulo1Page> {
                         height: 60,
                       ),
                       Text(
-                        'Quais das alternativas apresentam apenas Necessidades e nenhum Desejo:',
+                        'A melhor conduta com o seu dinheiro no mês, de acordo com a aula, seria:',
                         style: TextStyle(
                           color: Color(0xFF189B17),
                           fontSize: 24,
@@ -143,10 +144,13 @@ class _Questionario4Modulo1PageState extends State<Questionario4Modulo1Page> {
                             height: 30,
                             child: ElevatedButton(
                               onPressed: () {
-                                createErradoDialog(context);
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (BuildContext context) =>
+                                            Questionario4Modulo5App()));
                               },
-                              child: Text(
-                                  'Roupas, Restaurantes, Exercicio Físico.'),
+                              child: Text('Nenhuma das anteriores.'),
                               style: ElevatedButton.styleFrom(
                                   primary: Color(0xFF189B17),
                                   padding: EdgeInsets.symmetric(
@@ -163,7 +167,8 @@ class _Questionario4Modulo1PageState extends State<Questionario4Modulo1Page> {
                               onPressed: () {
                                 createErradoDialog(context);
                               },
-                              child: Text('Transporte, Saúde, Casa Própia.'),
+                              child: Text(
+                                  'A carteira de investimentos dos investidores de perfil arrojado deve ser composta apenas por caderneta de poupança, títulos públicos e fundos de curto prazo.'),
                               style: ElevatedButton.styleFrom(
                                   primary: Color(0xFF189B17),
                                   padding: EdgeInsets.symmetric(
@@ -180,7 +185,8 @@ class _Questionario4Modulo1PageState extends State<Questionario4Modulo1Page> {
                               onPressed: () {
                                 createErradoDialog(context);
                               },
-                              child: Text('Moradia, Jet ski, Academia.'),
+                              child: Text(
+                                  'Fundos multimercado são exemplos de investimento mais compatíveis com investidores de perfil conservador.'),
                               style: ElevatedButton.styleFrom(
                                   primary: Color(0xFF189B17),
                                   padding: EdgeInsets.symmetric(
@@ -195,13 +201,10 @@ class _Questionario4Modulo1PageState extends State<Questionario4Modulo1Page> {
                             height: 30,
                             child: ElevatedButton(
                               onPressed: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (BuildContext context) =>
-                                            ResultadoModulo1App()));
+                                createErradoDialog(context);
                               },
-                              child: Text('Moradia, Lazer, Saúde.'),
+                              child: Text(
+                                  'Fundos cambiais e de ações são sempre indicados para investidores com perfil moderado.'),
                               style: ElevatedButton.styleFrom(
                                   primary: Color(0xFF189B17),
                                   padding: EdgeInsets.symmetric(
@@ -217,7 +220,7 @@ class _Questionario4Modulo1PageState extends State<Questionario4Modulo1Page> {
                                   context,
                                   MaterialPageRoute(
                                       builder: (BuildContext context) =>
-                                          Questionario3Modulo1App()));
+                                          Questionario2Modulo5App()));
                             },
                             child: Text('Voltar'),
                             style: ElevatedButton.styleFrom(

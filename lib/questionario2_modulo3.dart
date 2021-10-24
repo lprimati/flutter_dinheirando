@@ -2,19 +2,20 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+
 import 'package:flutter_dinheirando/aula_modulo1.dart';
-import 'package:flutter_dinheirando/questionario3_modulo1.dart';
-import 'package:flutter_dinheirando/resultado_modulo1.dart';
+import 'package:flutter_dinheirando/questionario1_modulo3.dart';
+import 'package:flutter_dinheirando/questionario3_modulo3.dart';
 
-void main() => runApp(Questionario4Modulo1App());
+void main() => runApp(Questionario2Modulo3App());
 
-class Questionario4Modulo1App extends StatelessWidget {
+class Questionario2Modulo3App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'questionario',
       theme: ThemeData(primarySwatch: Colors.deepPurple),
-      home: Questionario4Modulo1Page(),
+      home: Questionario2Modulo3Page(),
     );
   }
 }
@@ -61,14 +62,14 @@ createErradoDialog(BuildContext context) {
       });
 }
 
-class Questionario4Modulo1Page extends StatefulWidget {
+class Questionario2Modulo3Page extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return _Questionario4Modulo1PageState();
+    return _Questionario2Modulo3PageState();
   }
 }
 
-class _Questionario4Modulo1PageState extends State<Questionario4Modulo1Page> {
+class _Questionario2Modulo3PageState extends State<Questionario2Modulo3Page> {
   get height => null;
 
   //159B06
@@ -83,7 +84,7 @@ class _Questionario4Modulo1PageState extends State<Questionario4Modulo1Page> {
     return Scaffold(
         appBar: AppBar(
           centerTitle: true,
-          title: Text('Modulo 1'),
+          title: Text('Modulo 3'),
           elevation: 0,
           backgroundColor: Color(0xFF189B17),
           leading: IconButton(
@@ -124,7 +125,7 @@ class _Questionario4Modulo1PageState extends State<Questionario4Modulo1Page> {
                         height: 60,
                       ),
                       Text(
-                        'Quais das alternativas apresentam apenas Necessidades e nenhum Desejo:',
+                        'Em relação aos juros:\n\n a) Ao comprarmos um produto qualquer a prazo normalmente pagamos juros, que é uma espécie de aluguel do dinheiro, pois estamos consumindo hoje para pagarmos no futuro. \n\n b) Ao planejarmos um consumo futuro, poupando um dinheiro para efetuar uma compra, estamos em uma posição devedora. \n\n Assinale a alternativa correta.',
                         style: TextStyle(
                           color: Color(0xFF189B17),
                           fontSize: 24,
@@ -146,7 +147,7 @@ class _Questionario4Modulo1PageState extends State<Questionario4Modulo1Page> {
                                 createErradoDialog(context);
                               },
                               child: Text(
-                                  'Roupas, Restaurantes, Exercicio Físico.'),
+                                  'Apenas a alternativa “b” está correta.'),
                               style: ElevatedButton.styleFrom(
                                   primary: Color(0xFF189B17),
                                   padding: EdgeInsets.symmetric(
@@ -163,7 +164,8 @@ class _Questionario4Modulo1PageState extends State<Questionario4Modulo1Page> {
                               onPressed: () {
                                 createErradoDialog(context);
                               },
-                              child: Text('Transporte, Saúde, Casa Própia.'),
+                              child:
+                                  Text('Ambas as afirmativas estão erradas.'),
                               style: ElevatedButton.styleFrom(
                                   primary: Color(0xFF189B17),
                                   padding: EdgeInsets.symmetric(
@@ -180,7 +182,8 @@ class _Questionario4Modulo1PageState extends State<Questionario4Modulo1Page> {
                               onPressed: () {
                                 createErradoDialog(context);
                               },
-                              child: Text('Moradia, Jet ski, Academia.'),
+                              child:
+                                  Text('Ambas as afirmativas estão corretas.'),
                               style: ElevatedButton.styleFrom(
                                   primary: Color(0xFF189B17),
                                   padding: EdgeInsets.symmetric(
@@ -199,9 +202,10 @@ class _Questionario4Modulo1PageState extends State<Questionario4Modulo1Page> {
                                     context,
                                     MaterialPageRoute(
                                         builder: (BuildContext context) =>
-                                            ResultadoModulo1App()));
+                                            Questionario3Modulo3App()));
                               },
-                              child: Text('Moradia, Lazer, Saúde.'),
+                              child: Text(
+                                  'Apenas a alternativa “a” está correta.'),
                               style: ElevatedButton.styleFrom(
                                   primary: Color(0xFF189B17),
                                   padding: EdgeInsets.symmetric(
@@ -217,7 +221,7 @@ class _Questionario4Modulo1PageState extends State<Questionario4Modulo1Page> {
                                   context,
                                   MaterialPageRoute(
                                       builder: (BuildContext context) =>
-                                          Questionario3Modulo1App()));
+                                          Questionario1Modulo3App()));
                             },
                             child: Text('Voltar'),
                             style: ElevatedButton.styleFrom(

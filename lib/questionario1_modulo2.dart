@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_dinheirando/atividades.dart';
 import 'package:flutter_dinheirando/aula_modulo1.dart';
+import 'package:flutter_dinheirando/questionario2_modulo2.dart';
 
 void main() => runApp(Questionario1Modulo2App());
 
@@ -123,7 +124,7 @@ class _Questionario1Modulo2PageState extends State<Questionario1Modulo2Page> {
                         height: 60,
                       ),
                       Text(
-                        'A melhor conduta com o seu dinheiro no mês, de acordo com a aula, seria:',
+                        'Em relação ao orçamento financeiro pessoal, podemos afirmar, EXCETO:',
                         style: TextStyle(
                           color: Color(0xFF189B17),
                           fontSize: 24,
@@ -137,48 +138,77 @@ class _Questionario1Modulo2PageState extends State<Questionario1Modulo2Page> {
                           const SizedBox(
                             height: 70,
                           ),
-                          ElevatedButton(
-                            onPressed: () {},
-                            child: Text(
-                                ' Realizar seus gastos normalmente ao longo do mês, e ao final poupar o restante'),
-                            style: ElevatedButton.styleFrom(
-                                primary: Color(0xFF189B17),
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: 84, vertical: 15)),
+                          SizedBox(
+                            width: double.infinity,
+                            height: 30,
+                            child: ElevatedButton(
+                              onPressed: () {
+                                createErradoDialog(context);
+                              },
+                              child: Text(
+                                  'Contribui para você identificar e entender os hábitos de consumo.'),
+                              style: ElevatedButton.styleFrom(
+                                  primary: Color(0xFF189B17),
+                                  padding: EdgeInsets.symmetric(
+                                      horizontal: 84, vertical: 15)),
+                            ),
                           ),
                           const SizedBox(
                             height: 20,
                           ),
-                          ElevatedButton(
-                            onPressed: () {},
-                            child: Text(
-                                'Separar o valor que vai poupar durante o mês, depois de alguns gastos necessários'),
-                            style: ElevatedButton.styleFrom(
-                                primary: Color(0xFF189B17),
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: 80, vertical: 15)),
+                          SizedBox(
+                            width: double.infinity,
+                            height: 30,
+                            child: ElevatedButton(
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (BuildContext context) =>
+                                            Questionario2Modulo2App()));
+                              },
+                              child: Text('Não necessita de acompanhamento.'),
+                              style: ElevatedButton.styleFrom(
+                                  primary: Color(0xFF189B17),
+                                  padding: EdgeInsets.symmetric(
+                                      horizontal: 80, vertical: 15)),
+                            ),
                           ),
                           const SizedBox(
                             height: 20,
                           ),
-                          ElevatedButton(
-                            onPressed: () {},
-                            child: Text('Entreterimento'),
-                            style: ElevatedButton.styleFrom(
-                                primary: Color(0xFF189B17),
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: 80, vertical: 15)),
+                          SizedBox(
+                            width: double.infinity,
+                            height: 30,
+                            child: ElevatedButton(
+                              onPressed: () {
+                                createErradoDialog(context);
+                              },
+                              child: Text(
+                                  'Oferece uma oportunidade para você avaliar sua vida financeira.'),
+                              style: ElevatedButton.styleFrom(
+                                  primary: Color(0xFF189B17),
+                                  padding: EdgeInsets.symmetric(
+                                      horizontal: 80, vertical: 15)),
+                            ),
                           ),
                           const SizedBox(
                             height: 20,
                           ),
-                          ElevatedButton(
-                            onPressed: () {},
-                            child: Text('Doa'),
-                            style: ElevatedButton.styleFrom(
-                                primary: Color(0xFF189B17),
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: 90, vertical: 15)),
+                          SizedBox(
+                            width: double.infinity,
+                            height: 30,
+                            child: ElevatedButton(
+                              onPressed: () {
+                                createErradoDialog(context);
+                              },
+                              child: Text(
+                                  'É uma ferramenta de planejamento financeiro.'),
+                              style: ElevatedButton.styleFrom(
+                                  primary: Color(0xFF189B17),
+                                  padding: EdgeInsets.symmetric(
+                                      horizontal: 90, vertical: 15)),
+                            ),
                           ),
                           const SizedBox(
                             height: 80,
@@ -191,7 +221,7 @@ class _Questionario1Modulo2PageState extends State<Questionario1Modulo2Page> {
                                       builder: (BuildContext context) =>
                                           AtividadeApp()));
                             },
-                            child: Text('Avançar'),
+                            child: Text('Voltar'),
                             style: ElevatedButton.styleFrom(
                                 primary: Color(0xFF189B17),
                                 padding: EdgeInsets.symmetric(

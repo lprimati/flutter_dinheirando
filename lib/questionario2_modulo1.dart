@@ -2,8 +2,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_dinheirando/atividades.dart';
+
 import 'package:flutter_dinheirando/aula_modulo1.dart';
+import 'package:flutter_dinheirando/questionario1_modulo1.dart';
+import 'package:flutter_dinheirando/questionario3_modulo1.dart';
 
 void main() => runApp(Questionario2Modulo1App());
 
@@ -81,6 +83,7 @@ class _Questionario2Modulo1PageState extends State<Questionario2Modulo1Page> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          centerTitle: true,
           title: Text('Modulo 1'),
           elevation: 0,
           backgroundColor: Color(0xFF189B17),
@@ -122,7 +125,7 @@ class _Questionario2Modulo1PageState extends State<Questionario2Modulo1Page> {
                         height: 60,
                       ),
                       Text(
-                        'A melhor conduta com o seu dinheiro no mês, de acordo com a aula, seria:',
+                        'Qual o primeiro passo para que um sonho seja transfomando em realidade?',
                         style: TextStyle(
                           color: Color(0xFF189B17),
                           fontSize: 24,
@@ -136,48 +139,76 @@ class _Questionario2Modulo1PageState extends State<Questionario2Modulo1Page> {
                           const SizedBox(
                             height: 70,
                           ),
-                          ElevatedButton(
-                            onPressed: () {},
-                            child: Text(
-                                ' Realizar seus gastos normalmente ao longo do mês, e ao final poupar o restante'),
-                            style: ElevatedButton.styleFrom(
-                                primary: Color(0xFF189B17),
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: 84, vertical: 15)),
+                          SizedBox(
+                            width: double.infinity,
+                            height: 30,
+                            child: ElevatedButton(
+                              onPressed: () {
+                                createErradoDialog(context);
+                              },
+                              child: Text('Estabelecer etapas intermediárias.'),
+                              style: ElevatedButton.styleFrom(
+                                  primary: Color(0xFF189B17),
+                                  padding: EdgeInsets.symmetric(
+                                      horizontal: 84, vertical: 15)),
+                            ),
                           ),
                           const SizedBox(
                             height: 20,
                           ),
-                          ElevatedButton(
-                            onPressed: () {},
-                            child: Text(
-                                'Separar o valor que vai poupar durante o mês, depois de alguns gastos necessários'),
-                            style: ElevatedButton.styleFrom(
-                                primary: Color(0xFF189B17),
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: 80, vertical: 15)),
+                          SizedBox(
+                            width: double.infinity,
+                            height: 30,
+                            child: ElevatedButton(
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (BuildContext context) =>
+                                            Questionario3Modulo1App()));
+                              },
+                              child: Text('Saber aonde você quer chegar.'),
+                              style: ElevatedButton.styleFrom(
+                                  primary: Color(0xFF189B17),
+                                  padding: EdgeInsets.symmetric(
+                                      horizontal: 80, vertical: 15)),
+                            ),
                           ),
                           const SizedBox(
                             height: 20,
                           ),
-                          ElevatedButton(
-                            onPressed: () {},
-                            child: Text('Entreterimento'),
-                            style: ElevatedButton.styleFrom(
-                                primary: Color(0xFF189B17),
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: 80, vertical: 15)),
+                          SizedBox(
+                            width: double.infinity,
+                            height: 30,
+                            child: ElevatedButton(
+                              onPressed: () {
+                                createErradoDialog(context);
+                              },
+                              child: Text(
+                                  'Compartilhar e comemorar as etapas intermediárias da caminhada.'),
+                              style: ElevatedButton.styleFrom(
+                                  primary: Color(0xFF189B17),
+                                  padding: EdgeInsets.symmetric(
+                                      horizontal: 80, vertical: 15)),
+                            ),
                           ),
                           const SizedBox(
                             height: 20,
                           ),
-                          ElevatedButton(
-                            onPressed: () {},
-                            child: Text('Doa'),
-                            style: ElevatedButton.styleFrom(
-                                primary: Color(0xFF189B17),
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: 90, vertical: 15)),
+                          SizedBox(
+                            width: double.infinity,
+                            height: 30,
+                            child: ElevatedButton(
+                              onPressed: () {
+                                createErradoDialog(context);
+                              },
+                              child:
+                                  Text('Estabelecer metas claras e objetivas.'),
+                              style: ElevatedButton.styleFrom(
+                                  primary: Color(0xFF189B17),
+                                  padding: EdgeInsets.symmetric(
+                                      horizontal: 90, vertical: 15)),
+                            ),
                           ),
                           const SizedBox(
                             height: 80,
@@ -188,9 +219,9 @@ class _Questionario2Modulo1PageState extends State<Questionario2Modulo1Page> {
                                   context,
                                   MaterialPageRoute(
                                       builder: (BuildContext context) =>
-                                          AtividadeApp()));
+                                          Questionario1Modulo1App()));
                             },
-                            child: Text('Avançar'),
+                            child: Text('Voltar'),
                             style: ElevatedButton.styleFrom(
                                 primary: Color(0xFF189B17),
                                 padding: EdgeInsets.symmetric(

@@ -2,19 +2,20 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+
 import 'package:flutter_dinheirando/aula_modulo1.dart';
-import 'package:flutter_dinheirando/questionario3_modulo1.dart';
-import 'package:flutter_dinheirando/resultado_modulo1.dart';
+import 'package:flutter_dinheirando/questionario2_modulo3.dart';
+import 'package:flutter_dinheirando/questionario4_modulo3.dart';
 
-void main() => runApp(Questionario4Modulo1App());
+void main() => runApp(Questionario3Modulo3App());
 
-class Questionario4Modulo1App extends StatelessWidget {
+class Questionario3Modulo3App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'questionario',
       theme: ThemeData(primarySwatch: Colors.deepPurple),
-      home: Questionario4Modulo1Page(),
+      home: Questionario3Modulo3Page(),
     );
   }
 }
@@ -61,14 +62,14 @@ createErradoDialog(BuildContext context) {
       });
 }
 
-class Questionario4Modulo1Page extends StatefulWidget {
+class Questionario3Modulo3Page extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return _Questionario4Modulo1PageState();
+    return _Questionario3Modulo3PageState();
   }
 }
 
-class _Questionario4Modulo1PageState extends State<Questionario4Modulo1Page> {
+class _Questionario3Modulo3PageState extends State<Questionario3Modulo3Page> {
   get height => null;
 
   //159B06
@@ -83,7 +84,7 @@ class _Questionario4Modulo1PageState extends State<Questionario4Modulo1Page> {
     return Scaffold(
         appBar: AppBar(
           centerTitle: true,
-          title: Text('Modulo 1'),
+          title: Text('Modulo 3'),
           elevation: 0,
           backgroundColor: Color(0xFF189B17),
           leading: IconButton(
@@ -124,7 +125,7 @@ class _Questionario4Modulo1PageState extends State<Questionario4Modulo1Page> {
                         height: 60,
                       ),
                       Text(
-                        'Quais das alternativas apresentam apenas Necessidades e nenhum Desejo:',
+                        'O uso inadequado do crédito pode levar ao endividamento excessivo e comprometer toda a sua vida financeira, acarretando descontrole emocional, problemas de saúde e, até mesmo, desestruturação familiar. Todas as alternativas estão corretas, EXCETO:',
                         style: TextStyle(
                           color: Color(0xFF189B17),
                           fontSize: 24,
@@ -146,7 +147,7 @@ class _Questionario4Modulo1PageState extends State<Questionario4Modulo1Page> {
                                 createErradoDialog(context);
                               },
                               child: Text(
-                                  'Roupas, Restaurantes, Exercicio Físico.'),
+                                  'É importante refletir antes de tomar crédito e não o utilizar de forma indiscriminada.'),
                               style: ElevatedButton.styleFrom(
                                   primary: Color(0xFF189B17),
                                   padding: EdgeInsets.symmetric(
@@ -163,7 +164,8 @@ class _Questionario4Modulo1PageState extends State<Questionario4Modulo1Page> {
                               onPressed: () {
                                 createErradoDialog(context);
                               },
-                              child: Text('Transporte, Saúde, Casa Própia.'),
+                              child: Text(
+                                  'O cartão de crédito pode ser uma alternativa para realizar compras, desde que usado com muito critério.'),
                               style: ElevatedButton.styleFrom(
                                   primary: Color(0xFF189B17),
                                   padding: EdgeInsets.symmetric(
@@ -180,7 +182,8 @@ class _Questionario4Modulo1PageState extends State<Questionario4Modulo1Page> {
                               onPressed: () {
                                 createErradoDialog(context);
                               },
-                              child: Text('Moradia, Jet ski, Academia.'),
+                              child: Text(
+                                  'Devemos estar conscientes de que, ao tomar crédito, podemos limitar o consumo futuro.'),
                               style: ElevatedButton.styleFrom(
                                   primary: Color(0xFF189B17),
                                   padding: EdgeInsets.symmetric(
@@ -199,9 +202,10 @@ class _Questionario4Modulo1PageState extends State<Questionario4Modulo1Page> {
                                     context,
                                     MaterialPageRoute(
                                         builder: (BuildContext context) =>
-                                            ResultadoModulo1App()));
+                                            Questionario4Modulo3App()));
                               },
-                              child: Text('Moradia, Lazer, Saúde.'),
+                              child: Text(
+                                  'Devo adquirir um produto ou serviço sempre que a prestação mensal couber no bolso ou seja, sempre que eu achar que consigo pagar.'),
                               style: ElevatedButton.styleFrom(
                                   primary: Color(0xFF189B17),
                                   padding: EdgeInsets.symmetric(
@@ -217,7 +221,7 @@ class _Questionario4Modulo1PageState extends State<Questionario4Modulo1Page> {
                                   context,
                                   MaterialPageRoute(
                                       builder: (BuildContext context) =>
-                                          Questionario3Modulo1App()));
+                                          Questionario2Modulo3App()));
                             },
                             child: Text('Voltar'),
                             style: ElevatedButton.styleFrom(

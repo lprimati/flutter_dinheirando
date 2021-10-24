@@ -2,19 +2,20 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+
 import 'package:flutter_dinheirando/aula_modulo1.dart';
-import 'package:flutter_dinheirando/questionario3_modulo1.dart';
-import 'package:flutter_dinheirando/resultado_modulo1.dart';
+import 'package:flutter_dinheirando/questionario3_modulo6.dart';
+import 'package:flutter_dinheirando/resultado_modulo6.dart';
 
-void main() => runApp(Questionario4Modulo1App());
+void main() => runApp(Questionario4Modulo6App());
 
-class Questionario4Modulo1App extends StatelessWidget {
+class Questionario4Modulo6App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'questionario',
       theme: ThemeData(primarySwatch: Colors.deepPurple),
-      home: Questionario4Modulo1Page(),
+      home: Questionario4Modulo6Page(),
     );
   }
 }
@@ -61,14 +62,14 @@ createErradoDialog(BuildContext context) {
       });
 }
 
-class Questionario4Modulo1Page extends StatefulWidget {
+class Questionario4Modulo6Page extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return _Questionario4Modulo1PageState();
+    return _Questionario4Modulo6PageState();
   }
 }
 
-class _Questionario4Modulo1PageState extends State<Questionario4Modulo1Page> {
+class _Questionario4Modulo6PageState extends State<Questionario4Modulo6Page> {
   get height => null;
 
   //159B06
@@ -83,7 +84,7 @@ class _Questionario4Modulo1PageState extends State<Questionario4Modulo1Page> {
     return Scaffold(
         appBar: AppBar(
           centerTitle: true,
-          title: Text('Modulo 1'),
+          title: Text('Modulo 6'),
           elevation: 0,
           backgroundColor: Color(0xFF189B17),
           leading: IconButton(
@@ -124,7 +125,7 @@ class _Questionario4Modulo1PageState extends State<Questionario4Modulo1Page> {
                         height: 60,
                       ),
                       Text(
-                        'Quais das alternativas apresentam apenas Necessidades e nenhum Desejo:',
+                        'São cuidados que devemos ter na contratação de seguros, EXCETO:',
                         style: TextStyle(
                           color: Color(0xFF189B17),
                           fontSize: 24,
@@ -145,46 +146,12 @@ class _Questionario4Modulo1PageState extends State<Questionario4Modulo1Page> {
                               onPressed: () {
                                 createErradoDialog(context);
                               },
-                              child: Text(
-                                  'Roupas, Restaurantes, Exercicio Físico.'),
+                              child: Text('Ler atentamente o contrato.'),
                               style: ElevatedButton.styleFrom(
-                                  primary: Color(0xFF189B17),
-                                  padding: EdgeInsets.symmetric(
-                                      horizontal: 84, vertical: 15)),
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 20,
-                          ),
-                          SizedBox(
-                            width: double.infinity,
-                            height: 30,
-                            child: ElevatedButton(
-                              onPressed: () {
-                                createErradoDialog(context);
-                              },
-                              child: Text('Transporte, Saúde, Casa Própia.'),
-                              style: ElevatedButton.styleFrom(
-                                  primary: Color(0xFF189B17),
-                                  padding: EdgeInsets.symmetric(
-                                      horizontal: 80, vertical: 15)),
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 20,
-                          ),
-                          SizedBox(
-                            width: double.infinity,
-                            height: 30,
-                            child: ElevatedButton(
-                              onPressed: () {
-                                createErradoDialog(context);
-                              },
-                              child: Text('Moradia, Jet ski, Academia.'),
-                              style: ElevatedButton.styleFrom(
-                                  primary: Color(0xFF189B17),
-                                  padding: EdgeInsets.symmetric(
-                                      horizontal: 80, vertical: 15)),
+                                primary: Color(0xFF189B17),
+                                // padding: EdgeInsets.symmetric(
+                                //     horizontal: 84, vertical: 15)
+                              ),
                             ),
                           ),
                           const SizedBox(
@@ -199,13 +166,52 @@ class _Questionario4Modulo1PageState extends State<Questionario4Modulo1Page> {
                                     context,
                                     MaterialPageRoute(
                                         builder: (BuildContext context) =>
-                                            ResultadoModulo1App()));
+                                            ResultadoModulo6App()));
                               },
-                              child: Text('Moradia, Lazer, Saúde.'),
+                              child: Text('Não fazer comparações de preço.'),
                               style: ElevatedButton.styleFrom(
-                                  primary: Color(0xFF189B17),
-                                  padding: EdgeInsets.symmetric(
-                                      horizontal: 90, vertical: 15)),
+                                primary: Color(0xFF189B17),
+                                // padding: EdgeInsets.symmetric(
+                                //     horizontal: 80, vertical: 15)
+                              ),
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 20,
+                          ),
+                          SizedBox(
+                            width: double.infinity,
+                            height: 50,
+                            child: ElevatedButton(
+                              onPressed: () {
+                                createErradoDialog(context);
+                              },
+                              child: Text(
+                                  'Atentar para as cláusulas referentes à garantia e aos riscos excluídos da cobertura do seguro.'),
+                              style: ElevatedButton.styleFrom(
+                                primary: Color(0xFF189B17),
+                                // padding: EdgeInsets.symmetric(
+                                //     horizontal: 80, vertical: 15)
+                              ),
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 20,
+                          ),
+                          SizedBox(
+                            width: double.infinity,
+                            height: 30,
+                            child: ElevatedButton(
+                              onPressed: () {
+                                createErradoDialog(context);
+                              },
+                              child: Text(
+                                  'Verificar a idoneidade da empresa e do corretor de seguros.'),
+                              style: ElevatedButton.styleFrom(
+                                primary: Color(0xFF189B17),
+                                // padding: EdgeInsets.symmetric(
+                                //     horizontal: 90, vertical: 15)
+                              ),
                             ),
                           ),
                           const SizedBox(
@@ -217,7 +223,7 @@ class _Questionario4Modulo1PageState extends State<Questionario4Modulo1Page> {
                                   context,
                                   MaterialPageRoute(
                                       builder: (BuildContext context) =>
-                                          Questionario3Modulo1App()));
+                                          Questionario3Modulo6App()));
                             },
                             child: Text('Voltar'),
                             style: ElevatedButton.styleFrom(

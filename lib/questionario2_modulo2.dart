@@ -2,19 +2,20 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+
 import 'package:flutter_dinheirando/aula_modulo1.dart';
-import 'package:flutter_dinheirando/questionario3_modulo1.dart';
-import 'package:flutter_dinheirando/resultado_modulo1.dart';
+import 'package:flutter_dinheirando/questionario1_modulo2.dart';
+import 'package:flutter_dinheirando/questionario3_modulo2.dart';
 
-void main() => runApp(Questionario4Modulo1App());
+void main() => runApp(Questionario2Modulo2App());
 
-class Questionario4Modulo1App extends StatelessWidget {
+class Questionario2Modulo2App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'questionario',
       theme: ThemeData(primarySwatch: Colors.deepPurple),
-      home: Questionario4Modulo1Page(),
+      home: Questionario2Modulo2Page(),
     );
   }
 }
@@ -61,14 +62,14 @@ createErradoDialog(BuildContext context) {
       });
 }
 
-class Questionario4Modulo1Page extends StatefulWidget {
+class Questionario2Modulo2Page extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return _Questionario4Modulo1PageState();
+    return _Questionario2Modulo2PageState();
   }
 }
 
-class _Questionario4Modulo1PageState extends State<Questionario4Modulo1Page> {
+class _Questionario2Modulo2PageState extends State<Questionario2Modulo2Page> {
   get height => null;
 
   //159B06
@@ -83,7 +84,7 @@ class _Questionario4Modulo1PageState extends State<Questionario4Modulo1Page> {
     return Scaffold(
         appBar: AppBar(
           centerTitle: true,
-          title: Text('Modulo 1'),
+          title: Text('Modulo 2'),
           elevation: 0,
           backgroundColor: Color(0xFF189B17),
           leading: IconButton(
@@ -124,7 +125,7 @@ class _Questionario4Modulo1PageState extends State<Questionario4Modulo1Page> {
                         height: 60,
                       ),
                       Text(
-                        'Quais das alternativas apresentam apenas Necessidades e nenhum Desejo:',
+                        'Qual é a última etapa do planejamento do orçamento familiar/pessoal?',
                         style: TextStyle(
                           color: Color(0xFF189B17),
                           fontSize: 24,
@@ -145,8 +146,7 @@ class _Questionario4Modulo1PageState extends State<Questionario4Modulo1Page> {
                               onPressed: () {
                                 createErradoDialog(context);
                               },
-                              child: Text(
-                                  'Roupas, Restaurantes, Exercicio Físico.'),
+                              child: Text('Registro.'),
                               style: ElevatedButton.styleFrom(
                                   primary: Color(0xFF189B17),
                                   padding: EdgeInsets.symmetric(
@@ -163,24 +163,7 @@ class _Questionario4Modulo1PageState extends State<Questionario4Modulo1Page> {
                               onPressed: () {
                                 createErradoDialog(context);
                               },
-                              child: Text('Transporte, Saúde, Casa Própia.'),
-                              style: ElevatedButton.styleFrom(
-                                  primary: Color(0xFF189B17),
-                                  padding: EdgeInsets.symmetric(
-                                      horizontal: 80, vertical: 15)),
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 20,
-                          ),
-                          SizedBox(
-                            width: double.infinity,
-                            height: 30,
-                            child: ElevatedButton(
-                              onPressed: () {
-                                createErradoDialog(context);
-                              },
-                              child: Text('Moradia, Jet ski, Academia.'),
+                              child: Text('Planejamento.'),
                               style: ElevatedButton.styleFrom(
                                   primary: Color(0xFF189B17),
                                   padding: EdgeInsets.symmetric(
@@ -199,9 +182,26 @@ class _Questionario4Modulo1PageState extends State<Questionario4Modulo1Page> {
                                     context,
                                     MaterialPageRoute(
                                         builder: (BuildContext context) =>
-                                            ResultadoModulo1App()));
+                                            Questionario3Modulo2App()));
                               },
-                              child: Text('Moradia, Lazer, Saúde.'),
+                              child: Text('Avaliação.'),
+                              style: ElevatedButton.styleFrom(
+                                  primary: Color(0xFF189B17),
+                                  padding: EdgeInsets.symmetric(
+                                      horizontal: 80, vertical: 15)),
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 20,
+                          ),
+                          SizedBox(
+                            width: double.infinity,
+                            height: 30,
+                            child: ElevatedButton(
+                              onPressed: () {
+                                createErradoDialog(context);
+                              },
+                              child: Text('Agrupamento.'),
                               style: ElevatedButton.styleFrom(
                                   primary: Color(0xFF189B17),
                                   padding: EdgeInsets.symmetric(
@@ -217,7 +217,7 @@ class _Questionario4Modulo1PageState extends State<Questionario4Modulo1Page> {
                                   context,
                                   MaterialPageRoute(
                                       builder: (BuildContext context) =>
-                                          Questionario3Modulo1App()));
+                                          Questionario1Modulo2App()));
                             },
                             child: Text('Voltar'),
                             style: ElevatedButton.styleFrom(

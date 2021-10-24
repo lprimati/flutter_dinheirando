@@ -77,16 +77,15 @@ class _LojaPageState extends State<LojaPage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     mainAxisSize: MainAxisSize.max,
                     children: <Widget>[
-                      //Text(
-                      //'MOEDAS',
-                      //textDirection: TextDirection.ltr,
-                      //style: TextStyle(
-                      //fontSize: 32,
-                      //color: Colors.white,
-                      //backgroundColor: Color(0xFF189B17),
-                      //),
-
-                      //),
+                      Text(
+                        'MOEDAS',
+                        textDirection: TextDirection.ltr,
+                        style: TextStyle(
+                          fontSize: 32,
+                          color: Colors.white,
+                          backgroundColor: Color(0xFF189B17),
+                        ),
+                      ),
                       const SizedBox(
                         height: 180,
                       ),

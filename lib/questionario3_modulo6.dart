@@ -2,19 +2,20 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+
 import 'package:flutter_dinheirando/aula_modulo1.dart';
-import 'package:flutter_dinheirando/questionario3_modulo1.dart';
-import 'package:flutter_dinheirando/resultado_modulo1.dart';
+import 'package:flutter_dinheirando/questionario2_modulo6.dart';
+import 'package:flutter_dinheirando/questionario4_modulo6.dart';
 
-void main() => runApp(Questionario4Modulo1App());
+void main() => runApp(Questionario3Modulo6App());
 
-class Questionario4Modulo1App extends StatelessWidget {
+class Questionario3Modulo6App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'questionario',
       theme: ThemeData(primarySwatch: Colors.deepPurple),
-      home: Questionario4Modulo1Page(),
+      home: Questionario3Modulo6Page(),
     );
   }
 }
@@ -61,14 +62,14 @@ createErradoDialog(BuildContext context) {
       });
 }
 
-class Questionario4Modulo1Page extends StatefulWidget {
+class Questionario3Modulo6Page extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return _Questionario4Modulo1PageState();
+    return _Questionario3Modulo6PageState();
   }
 }
 
-class _Questionario4Modulo1PageState extends State<Questionario4Modulo1Page> {
+class _Questionario3Modulo6PageState extends State<Questionario3Modulo6Page> {
   get height => null;
 
   //159B06
@@ -83,7 +84,7 @@ class _Questionario4Modulo1PageState extends State<Questionario4Modulo1Page> {
     return Scaffold(
         appBar: AppBar(
           centerTitle: true,
-          title: Text('Modulo 1'),
+          title: Text('Modulo 6'),
           elevation: 0,
           backgroundColor: Color(0xFF189B17),
           leading: IconButton(
@@ -124,7 +125,7 @@ class _Questionario4Modulo1PageState extends State<Questionario4Modulo1Page> {
                         height: 60,
                       ),
                       Text(
-                        'Quais das alternativas apresentam apenas Necessidades e nenhum Desejo:',
+                        'Entre as alternativas abaixo, qual não pode ser considerada como uma medida de proteção e/ou prevenção de riscos?',
                         style: TextStyle(
                           color: Color(0xFF189B17),
                           fontSize: 24,
@@ -145,8 +146,7 @@ class _Questionario4Modulo1PageState extends State<Questionario4Modulo1Page> {
                               onPressed: () {
                                 createErradoDialog(context);
                               },
-                              child: Text(
-                                  'Roupas, Restaurantes, Exercicio Físico.'),
+                              child: Text('Diversificar os investimentos.'),
                               style: ElevatedButton.styleFrom(
                                   primary: Color(0xFF189B17),
                                   padding: EdgeInsets.symmetric(
@@ -163,24 +163,8 @@ class _Questionario4Modulo1PageState extends State<Questionario4Modulo1Page> {
                               onPressed: () {
                                 createErradoDialog(context);
                               },
-                              child: Text('Transporte, Saúde, Casa Própia.'),
-                              style: ElevatedButton.styleFrom(
-                                  primary: Color(0xFF189B17),
-                                  padding: EdgeInsets.symmetric(
-                                      horizontal: 80, vertical: 15)),
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 20,
-                          ),
-                          SizedBox(
-                            width: double.infinity,
-                            height: 30,
-                            child: ElevatedButton(
-                              onPressed: () {
-                                createErradoDialog(context);
-                              },
-                              child: Text('Moradia, Jet ski, Academia.'),
+                              child: Text(
+                                  'Evitar estacionar o carro em locais isolados e com baixa iluminação.'),
                               style: ElevatedButton.styleFrom(
                                   primary: Color(0xFF189B17),
                                   padding: EdgeInsets.symmetric(
@@ -199,9 +183,28 @@ class _Questionario4Modulo1PageState extends State<Questionario4Modulo1Page> {
                                     context,
                                     MaterialPageRoute(
                                         builder: (BuildContext context) =>
-                                            ResultadoModulo1App()));
+                                            Questionario4Modulo6App()));
                               },
-                              child: Text('Moradia, Lazer, Saúde.'),
+                              child: Text(
+                                  'Confiar em que nada de ruim irá acontecer com você.'),
+                              style: ElevatedButton.styleFrom(
+                                  primary: Color(0xFF189B17),
+                                  padding: EdgeInsets.symmetric(
+                                      horizontal: 80, vertical: 15)),
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 20,
+                          ),
+                          SizedBox(
+                            width: double.infinity,
+                            height: 30,
+                            child: ElevatedButton(
+                              onPressed: () {
+                                createErradoDialog(context);
+                              },
+                              child: Text(
+                                  'Contratar um seguro contra incêndio da residência.'),
                               style: ElevatedButton.styleFrom(
                                   primary: Color(0xFF189B17),
                                   padding: EdgeInsets.symmetric(
@@ -217,7 +220,7 @@ class _Questionario4Modulo1PageState extends State<Questionario4Modulo1Page> {
                                   context,
                                   MaterialPageRoute(
                                       builder: (BuildContext context) =>
-                                          Questionario3Modulo1App()));
+                                          Questionario2Modulo6App()));
                             },
                             child: Text('Voltar'),
                             style: ElevatedButton.styleFrom(

@@ -2,8 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_dinheirando/atividades.dart';
 import 'package:flutter_dinheirando/aula_modulo1.dart';
+import 'package:flutter_dinheirando/questionario2_modulo1.dart';
+import 'package:flutter_dinheirando/questionario4_modulo1.dart';
 
 void main() => runApp(Questionario3Modulo1App());
 
@@ -81,6 +82,7 @@ class _Questionario3Modulo1PageState extends State<Questionario3Modulo1Page> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          centerTitle: true,
           title: Text('Modulo 1'),
           elevation: 0,
           backgroundColor: Color(0xFF189B17),
@@ -122,7 +124,7 @@ class _Questionario3Modulo1PageState extends State<Questionario3Modulo1Page> {
                         height: 60,
                       ),
                       Text(
-                        'A melhor conduta com o seu dinheiro no mês, de acordo com a aula, seria:',
+                        'Sob a ótica da gestão financeira pessoal, assinale a alternativa falsa:',
                         style: TextStyle(
                           color: Color(0xFF189B17),
                           fontSize: 24,
@@ -136,48 +138,78 @@ class _Questionario3Modulo1PageState extends State<Questionario3Modulo1Page> {
                           const SizedBox(
                             height: 70,
                           ),
-                          ElevatedButton(
-                            onPressed: () {},
-                            child: Text(
-                                ' Realizar seus gastos normalmente ao longo do mês, e ao final poupar o restante'),
-                            style: ElevatedButton.styleFrom(
-                                primary: Color(0xFF189B17),
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: 84, vertical: 15)),
+                          SizedBox(
+                            width: double.infinity,
+                            height: 30,
+                            child: ElevatedButton(
+                              onPressed: () {
+                                createErradoDialog(context);
+                              },
+                              child: Text(
+                                  'Necessidade é tudo aquilo de que precisamos, independentemente de nossos anseios. São coisas absolutamente indispensáveis para nossa vida.'),
+                              style: ElevatedButton.styleFrom(
+                                  primary: Color(0xFF189B17),
+                                  padding: EdgeInsets.symmetric(
+                                      horizontal: 84, vertical: 15)),
+                            ),
                           ),
                           const SizedBox(
                             height: 20,
                           ),
-                          ElevatedButton(
-                            onPressed: () {},
-                            child: Text(
-                                'Separar o valor que vai poupar durante o mês, depois de alguns gastos necessários'),
-                            style: ElevatedButton.styleFrom(
-                                primary: Color(0xFF189B17),
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: 80, vertical: 15)),
+                          SizedBox(
+                            width: double.infinity,
+                            height: 30,
+                            child: ElevatedButton(
+                              onPressed: () {
+                                createErradoDialog(context);
+                              },
+                              child: Text(
+                                  'As escolhas financeiras devem ser tomadas de modo equilibrado, considerando-se tanto o lado emocional quanto o lado racional.'),
+                              style: ElevatedButton.styleFrom(
+                                  primary: Color(0xFF189B17),
+                                  padding: EdgeInsets.symmetric(
+                                      horizontal: 80, vertical: 15)),
+                            ),
                           ),
                           const SizedBox(
                             height: 20,
                           ),
-                          ElevatedButton(
-                            onPressed: () {},
-                            child: Text('Entreterimento'),
-                            style: ElevatedButton.styleFrom(
-                                primary: Color(0xFF189B17),
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: 80, vertical: 15)),
+                          SizedBox(
+                            width: double.infinity,
+                            height: 30,
+                            child: ElevatedButton(
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (BuildContext context) =>
+                                            Questionario4Modulo1App()));
+                              },
+                              child: Text(
+                                  'Não devemos satisfazer nossos desejos, pois eles atrapalham nossa gestão financeira.'),
+                              style: ElevatedButton.styleFrom(
+                                  primary: Color(0xFF189B17),
+                                  padding: EdgeInsets.symmetric(
+                                      horizontal: 80, vertical: 15)),
+                            ),
                           ),
                           const SizedBox(
                             height: 20,
                           ),
-                          ElevatedButton(
-                            onPressed: () {},
-                            child: Text('Doa'),
-                            style: ElevatedButton.styleFrom(
-                                primary: Color(0xFF189B17),
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: 90, vertical: 15)),
+                          SizedBox(
+                            width: double.infinity,
+                            height: 30,
+                            child: ElevatedButton(
+                              onPressed: () {
+                                createErradoDialog(context);
+                              },
+                              child: Text(
+                                  'Juros pode ser entendido como o custo da realização de uma troca intertemporal.'),
+                              style: ElevatedButton.styleFrom(
+                                  primary: Color(0xFF189B17),
+                                  padding: EdgeInsets.symmetric(
+                                      horizontal: 90, vertical: 15)),
+                            ),
                           ),
                           const SizedBox(
                             height: 80,
@@ -188,9 +220,9 @@ class _Questionario3Modulo1PageState extends State<Questionario3Modulo1Page> {
                                   context,
                                   MaterialPageRoute(
                                       builder: (BuildContext context) =>
-                                          AtividadeApp()));
+                                          Questionario2Modulo1App()));
                             },
-                            child: Text('Avançar'),
+                            child: Text('Voltar'),
                             style: ElevatedButton.styleFrom(
                                 primary: Color(0xFF189B17),
                                 padding: EdgeInsets.symmetric(
