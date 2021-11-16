@@ -1,0 +1,150 @@
+//import 'dart:html';
+
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_dinheirando/perfil.dart';
+import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
+
+void main() => runApp(ForumApp());
+
+class ForumApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Fórum',
+      theme: ThemeData(primarySwatch: Colors.deepPurple),
+      home: ForumPage(),
+    );
+  }
+}
+
+class ForumPage extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return _ForumPageState();
+  }
+}
+
+class _ForumPageState extends State<ForumPage> {
+  get height => null;
+
+  //159B06
+  @override
+  void initState() {
+    SystemChrome.setEnabledSystemUIOverlays([]);
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          centerTitle: true,
+          title: Text('Fórum do aluno'),
+          elevation: 0,
+          backgroundColor: Color(0xFF189B17),
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back_ios),
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (BuildContext context) => PerfilApp()));
+            },
+          ),
+          actions: <Widget>[
+            IconButton(
+              icon: Icon(Icons.menu),
+              onPressed: () {},
+            )
+          ],
+        ),
+        body: Stack(
+          fit: StackFit.expand,
+          children: <Widget>[
+            Image(
+              image: AssetImage('assets/images/proj_tcc_08.jpg'),
+              height: double.infinity,
+              width: double.infinity,
+              fit: BoxFit.fill,
+            ),
+            SingleChildScrollView(
+              child: SizedBox(
+                width: MediaQuery.of(context).size.width,
+                //height: MediaQuery.of(context).size.height,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Container(
+                          //height: 200,
+                          padding: EdgeInsets.all(32),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: <Widget>[
+                              Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceAround,
+                                  children: <Widget>[
+                                    Column(
+                                      children: <Widget>[
+                                        // const SizedBox(
+                                        //   height: 50,
+                                        // ),
+                                        ElevatedButton(
+                                          onPressed: () {
+                                            Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                    builder: (BuildContext
+                                                            context) =>
+                                                        PerfilApp()));
+                                          },
+                                          child: Text('Voltar'),
+                                          style: ElevatedButton.styleFrom(
+                                              onPrimary: Color(0xFF189B17),
+                                              primary: Colors.white,
+                                              padding: EdgeInsets.symmetric(
+                                                  horizontal: 50,
+                                                  vertical: 15)),
+                                        ),
+                                      ],
+                                    ),
+                                    //const SizedBox(
+                                    //height: 10,
+                                    //),
+                                    Column(children: <Widget>[
+                                      ElevatedButton(
+                                        onPressed: () {},
+                                        child: Text('Avançar'),
+                                        style: ElevatedButton.styleFrom(
+                                            onPrimary: Color(0xFF189B17),
+                                            primary: Colors.white,
+                                            padding: EdgeInsets.symmetric(
+                                                horizontal: 40, vertical: 15)),
+                                      ),
+                                    ])
+                                  ]),
+                              const SizedBox(
+                                height: 40,
+                              ),
+                              FloatingActionButton(
+                                  child: Text(
+                                    "+",
+                                    style: TextStyle(fontSize: 24),
+                                  ),
+                                  onPressed: () {
+                                    //return showBarModalBottomSheet(context: context, builder: builder)
+                                  })
+                            ],
+                          ))
+                    ],
+                  ),
+                ),
+              ),
+            )
+          ],
+        ));
+  }
+}

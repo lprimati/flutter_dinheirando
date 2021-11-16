@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_dinheirando/atividades.dart';
-import 'package:flutter_dinheirando/forum.dart';
+import 'package:flutter_dinheirando/forum/forum.dart';
 import 'package:flutter_dinheirando/loja.dart';
 
 void main() => runApp(PerfilApp());

@@ -3,12 +3,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_dinheirando/perfil.dart';
-import 'package:flutter_dinheirando/aula_modulo1.dart';
-import 'package:flutter_dinheirando/aula_modulo2.dart';
-import 'package:flutter_dinheirando/aula_modulo3.dart';
-import 'package:flutter_dinheirando/aula_modulo4.dart';
-import 'package:flutter_dinheirando/aula_modulo5.dart';
-import 'package:flutter_dinheirando/aula_modulo6.dart';
+import 'package:flutter_dinheirando/modulo1/aula_modulo1.dart';
+import 'package:flutter_dinheirando/modulo2/aula_modulo2.dart';
+import 'package:flutter_dinheirando/modulo3/aula_modulo3.dart';
+import 'package:flutter_dinheirando/modulo4/aula_modulo4.dart';
+import 'package:flutter_dinheirando/modulo5/aula_modulo5.dart';
+import 'package:flutter_dinheirando/modulo6/aula_modulo6.dart';
 
 void main() => runApp(AtividadeApp());
 
