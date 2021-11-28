@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_dinheirando/login.dart';
 
+import 'package:flutter_dinheirando/cadastro.dart';
+
 void main() => runApp(BemVindoApp());
 
 class BemVindoApp extends StatelessWidget {
@@ -126,7 +128,13 @@ class _BemVindoPageState extends State<BemVindoPage> {
                       height: 20,
                     ),
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) =>
+                                    CadastroApp()));
+                      },
                       child: Text('CADASTRE-SE'),
                       style: ElevatedButton.styleFrom(
                           primary: Colors.white,

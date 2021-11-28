@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_dinheirando/modulo1/aula_modulo1.dart';
 import 'package:flutter_dinheirando/modulo1/questionario3_modulo1.dart';
-import 'package:flutter_dinheirando/aula1/resultado_modulo1.dart';
+import 'package:flutter_dinheirando/modulo1/resultado_modulo1.dart';
 
 void main() => runApp(Questionario4Modulo1App());
 
