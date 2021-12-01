@@ -28,6 +28,7 @@ class CadastroPage extends StatefulWidget {
 class _CadastroPageState extends State<CadastroPage> {
   String email = '';
   String senha = '';
+  String usuario = '';
   //159B06
   @override
   void initState() {
@@ -91,7 +92,7 @@ class _CadastroPageState extends State<CadastroPage> {
                 width: MediaQuery.of(context).size.width,
                 //padding: EdgeInsets.only(top: 62),
                 child: Padding(
-                  padding: const EdgeInsets.all(50.0),
+                  padding: const EdgeInsets.all(20.0),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
@@ -104,7 +105,17 @@ class _CadastroPageState extends State<CadastroPage> {
                             labelText: 'Email', border: OutlineInputBorder()),
                       ),
                       SizedBox(
-                        height: 20,
+                        height: 10,
+                      ),
+                      TextField(
+                        onChanged: (text) {
+                          usuario = text;
+                        },
+                        decoration: InputDecoration(
+                            labelText: 'Usuário', border: OutlineInputBorder()),
+                      ),
+                      SizedBox(
+                        height: 10,
                       ),
                       TextField(
                         onChanged: (text) {
@@ -114,18 +125,18 @@ class _CadastroPageState extends State<CadastroPage> {
                         decoration: InputDecoration(
                             labelText: 'Senha', border: OutlineInputBorder()),
                       ),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      TextField(
-                        onChanged: (text) {
-                          senha = text;
-                        },
-                        obscureText: true,
-                        decoration: InputDecoration(
-                            labelText: 'Repita Senha',
-                            border: OutlineInputBorder()),
-                      ),
+                      // SizedBox(
+                      //   height: 10,
+                      // ),
+                      // TextField(
+                      //   onChanged: (text) {
+                      //     senha = text;
+                      //   },
+                      //   obscureText: true,
+                      //   decoration: InputDecoration(
+                      //       labelText: 'Repita Senha',
+                      //       border: OutlineInputBorder()),
+                      // ),
                       // Container(
                       //   width: MediaQuery.of(context).size.width / 1.2,
                       //   height: 45,
